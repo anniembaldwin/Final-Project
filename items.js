@@ -9,314 +9,393 @@
 
 var ITEMS = [
  {
-  name: "ballpoint pen",
+  name: "ballpointpen",
+  caption: "ballpoint pen",
   status: "trash"
  },
  {
   name: "banana",
+  caption: "banana",
   status: "trash"
  },
  {
   name: "bubblewrap",
+  caption: "bubblewrap",
   status: "trash"
  },
  {
-  name: "candy wrapper",
+  name: "candywrapper"
+  caption: "candy wrapper",
   status: "trash"
  },
  {
-  name: "ceramic mug",
+  name: "ceramicmug",
+  caption: "ceramic mug",
   status: "trash"
  },
  {
-  name: "china plate",
+  name: "chinaplate",
+  caption: "china plate",
   status: "trash"
  },
  {
-  name: "bag of chips",
+  name: "bagofchips",
+  caption: "bag of chips",
   status: "trash"
  },
  {
-  name: "crepe paper",
+  name: "crepepaper",
+  caption: "crepe paper",
   status: "trash"
  },
  {
-  name: "drinking glass",
+  name: "drinkingglass",
+  caption: "drinking glass",
   status: "trash"
  },
  {
-  name: "dryer sheet",
+  name: "dryersheet",
+  caption: "dryer sheet",
   status: "trash"
  },
  {
-  name: "laboratory glass",
+  name: "laratoryglass",
+  caption: "laboratory glass",
   status: "trash"
  },
  {
-  name: "laminated paper",
+  "laminatedpaper",
+  caption: "laminated paper",
   status: "trash"
  },
  {
-  name: "metal box",
+  name: "metalbox",
+  caption: "metal box",
   status: "trash"
  },
  {
   name: "mirror",
+  caption: "mirror",
   status: "trash"
  },
  {
   name: "napkin",
+  caption: "napkin",
   status: "trash"
  },
  {
-  name: "paper towel",
+  name: "papertowel",
+  caption: "paper towel",
   status: "trash"
  },
  {
-  name: "plastic bag",
+  name: "plasticbag",
+  caption: "plastic bag",
   status: "trash"
  },
  {
-  name: "plastic fork",
+  name: "plasticfork",
+  caption: "plastic fork",
   status: "trash"
  },
  {
-  name: "plastic spoon",
+  name: "plasticspoon",
+  caption: "plastic spoon",
   status: "trash"
  },
  {
-  name: "plastic wrap",
+  name: "plasticwrap",
+  caption: "plastic wrap",
   status: "trash"
  },
  {
-  name: "Ramen noodles cup",
+  name: "Ramennoodlescup",
+  caption: "Ramen noodles cup",
   status: "trash"
  },
  {
-  name: "rubber bands",
+  "rubberbands",
+  caption: "rubber bands",
   status: "trash"
  },
  {
-  name: "styrofoam box",
+  name: "styrofoambox",
+  caption: "styrofoam box",
   status: "trash"
  },
  {
-  name: "styrofoam cup",
+  name: "styrofoamcup",
+  caption: "styrofoam cup",
   status: "trash"
  },
  {
-  name: "tempered glass",
+  name: "temperedglass",
+  caption: "tempered glass",
   status: "trash"
  },
  {
   name: "tissues",
+  caption: "tissues",
   status: "trash"
- },  {
-  name: "vhs video tape",
+ }, 
+ {
+  name: "vhsvideotape",
+  caption: "vhs video tape",
   status: "trash"
  },
  {
-  name: "wax paper",
+  name: "waxpaper",
+  caption: "wax paper",
   status: "trash"
  },
  {
-  name: "wooden box",
+  name: "woodenbox",
+  caption: "wooden box",
   status: "trash"
  },
  {
-  name: "ziplock bag",
+  name: "ziplockbag",
+  caption: "ziplock bag",
   status: "trash"
  },
  {
-  name: "aluminum can",
+  name: "aluminumcan",
+  caption: "aluminum can",
   status: "recycle"
  },
  {
-  name: "box from Amazon",
+  name: "boxfromAmazon",
+  caption: "box from Amazon",
   status: "recycle"
  },
  {
-  name: "beer bottle",
+  name: "beerbottle",
+  caption: "beer bottle",
   status: "reycle"
  },  
  {
-  name: "bottle cap",
+  name: "bottlecap",
+  caption: "bottle cap",
   status: "recycle"
  },
  {
-  name: "paper bag",
+  name: "paperbag",
+  caption: "paper bag",
   status: "recycle"
  },
  {
-  name: "cardboard takeout box",
+  name: "cardboardtakeoutbox",
+  caption: "cardboard takeout box",
   status: "recycle"
  },
  {
-  name: "detergent bottle",
+  name: "detergentbottle",
+  caption: "detergent bottle",
   status: "reycycle"
  },
  {
-  name: "foil takeout box",
+  name: "foiltakeoutbox",
+  caption: "foil takeout box",
   status: "recycle"
  },
  {
-  name: "Frappuccino cup",
+  name: "Frappuccinocup",
+  caption: "Frappuccino cup",
   status: "recycle"
  },
  {
-  name: "glass jar",
+  name: "glassjar",
+  caption: "glass jar",
   status: "recycle"
  },
   {
-  name: "hardback book",
+  name: "hardbackbook",
+  caption: "hardback book",
   status: "recycle"
  },
  {
-  name: "Harvard Crimson",
+  name: "HarvardCrimson",
+  caption: "Harvard Crimson",
   status: "recycle"
  },
  {
-  name: "ice cream carton",
+  name: "icecreamcarton",
+  caption: "ice cream carton",
   status: "recycle"
  },
  {
-  name: "juice box",
+  name: "juicebox",
+  caption: "juice box",
   status: "reycycle"
  },
  {
-  name: "junk mail",
+  name: "junkmail",
+  caption: "junk mail",
   status: "recycle"
  },
  {
-  name: "bottle of soda",
+  name: "bottleofsoda",
+  caption: "bottle of soda",
   status: "recycle"
  },
  {
   name: "magazines",
+  caption: "magazines",
   status: "recycle"
  },
   {
-  name: "paper milk carton",
+  name: "papermilkcarton",
+  caption: "paper milk carton",
   status: "recycle"
  },
  {
-  name: "notebook paper",
+  name: "notebookpaper",
+  caption: "notebook paper",
   status: "recycle"
  },
  {
-  name: "paper cup",
+  name: "papercup",
+  caption: "paper cup",
   status: "recycle"
  },
  {
-  name: "paper plate",
+  name: "paperplate",
+  caption: "paper plate",
   status: "reycycle"
  },
  {
-  name: "paper shopping bag",
+  name: "papershoppingbag",
+  caption: "paper shopping bag",
   status: "recycle"
  },
  {
-  name: "paperback book",
+  name: "paperbackbook",
+  caption: "paperback book",
   status: "recycle"
  },
  {
-  name: "pizza box",
+  name: "pizzabox",
+  caption: "pizza box",
   status: "recycle"
  },
    {
-  name: "plastic milk carton",
+  name: "plasticmilkcarton",
+  caption: "plastic milk carton",
   status: "recycle"
  },
  {
   name: "postcard",
+  caption: "postcard",
   status: "recycle"
  },
  {
-  name: "receipt",
+  name: "postcard",
+  caption: "receipt",
   status: "recycle"
  },
  {
   name: "envelope",
+  caption: "envelope",
   status: "reycycle"
  },
  {
-  name: "shredded paper",
+  name: "shreddedpaper",
+  caption: "shredded paper",
   status: "recycle"
  },
  {
-  name: "solo cup",
+  name: "solocup",
+  caption: "solo cup",
   status: "recycle"
  },
  {
   name: "stamp",
+  caption: "stamp",
   status: "recycle"
  },
-   {
-  name: "Starbucks cup",
+  {
+  nam: "starbuckscup",
+  caption: "Starbucks cup",
   status: "recycle"
  },
  {
-  name: "Starbucks frappuccino bottle",
+  name: "starbucksfrappuccinobottle",
+  caption: "Starbucks frappuccino bottle",
   status: "recycle"
  },
  {
-  name: "tin foil",
+  name: "tinfoil",
+  caption: "tin foil",
   status: "recycle"
  },
  {
   name: "tupperware",
+  caption: "tupperware",
   status: "reycycle"
  },
  {
-  name: "plastic water bottle",
+  name: "plasticwaterbottle",
+  caption: "plastic water bottle",
   status: "recycle"
  },
  {
-  name: "box from Zappos",
+  name: "boxfromZappos",
+  caption: "box from Zappos",
   status: "recycle"
  },
  {
   name: "laptop",
+  caption: "laptop",
   status: "e-waste"
  },
  {
-   name: "batteries",
+  name: "batteries",
+  caption: "batteries",
   status: "e-waste"
  },
   {
-  name: "cell phone battery",
+  name: "cellphonebattery",
+  caption: "cell phone battery",
   status: "e-waste"
  },
  {
-   name: "cell phone",
+  name: "cellphone",
+  caption: "cell phone",
   status: "e-waste"
  },
   {
   name: "CFL",
+  caption: "CFL",
   status: "e-waste"
  },
  {
-   name: "computer tower",
-  status: "e-waste"
- },
-  {
-  name: "computer monitor",
+  name: "computertower",
+  caption: "computer tower",
   status: "e-waste"
  },
  {
-   name: "DVD player",
-  status: "e-waste"
- },
-  {
-  name: "ink cartridge",
+  name: "computermonitor",
+  caption: "computer monitor",
   status: "e-waste"
  },
  {
-   name: "printer",
+  name: "DVDplayer", 
+  caption: "DVD player",
+  status: "e-waste"
+ },
+ {
+  name: "inkcartridge",
+  caption: "ink cartridge",
+  status: "e-waste"
+ },
+ {
+  name: "printer",
+  caption: "printer",
   status: "e-waste"
  },
   {
   name: "television",
+  caption: "television",
   status: "e-waste"
  },
 ]
