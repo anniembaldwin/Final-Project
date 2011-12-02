@@ -398,4 +398,19 @@ var ITEMS = [
   caption: "television",
   status: "e-waste"
  },
+  {
+  name: "reyclingbin",
+  caption: "recycling bin",
+  status: "recycle"
+ },
+ {
+  name: "trashcan",
+  caption: "trash can",
+  status: "trash"
+ },
+  {
+  name: "buildingmanager",
+  caption: "building manager",
+  status: "e-waste"
+ },
 ]
