@@ -42,6 +42,8 @@
                 $sql = "UPDATE users SET points=points + 1  WHERE id = $id";
                 mysql_query($sql);
                 ?>
+                random_image();
+                points();
                 
            }
                
@@ -53,7 +55,8 @@
                 $sql = "UPDATE users SET points=points - 3  WHERE id = $id";
                 mysql_query($sql);
                 ?>
-                
+               random_image();
+               points(); 
            }
                 
            // load a new image to the page for them to evaluate     
