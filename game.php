@@ -42,6 +42,8 @@
                 $sql = "UPDATE users SET points = points -1  WHERE id = $id";
                 mysql_query($sql);
                 ?>
+                random_image();
+                return false;
            }
                
            // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
@@ -52,6 +54,7 @@
                 
            // load a new image to the page for them to evaluate     
            random_image();
+           // call the points function for some unknown reason
            points();  
            return false; 
        }      
