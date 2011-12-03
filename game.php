@@ -34,6 +34,12 @@
            // get the loaded item's status (recyclable, disposable, or electronic recyclable)
            var status = ITEMS[random_integer].status;
            
+           // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
+           if (status !=bin)
+           {
+               document.getElementById("Correctness").innerHTML = "Incorrect";  
+           }
+           
            // if the clicked bin is the correct bin, tell the user so and update their points
            if (status == bin)
            {
@@ -43,12 +49,6 @@
                     mysql_query($sql);
                 ?>
                 points();
-           }
-               
-           // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
-           else if (status !=bin)
-           {
-               document.getElementById("Correctness").innerHTML = "Incorrect";  
            }
                 
            // load a new image to the page for them to evaluate     
