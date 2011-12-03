@@ -39,7 +39,7 @@
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
                 <?php
-                $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
+                $sql = "UPDATE users SET points = points -1  WHERE id = $id";
                 mysql_query($sql);
                 ?>
            }
