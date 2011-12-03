@@ -25,6 +25,8 @@
                 document.getElementById("Correctness").innerHTML = "Incorrect";
                 
            random_image();
+            
+           return false; 
        }      
        
        function random_image ()
