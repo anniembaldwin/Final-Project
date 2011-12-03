@@ -5,7 +5,7 @@
  <html>
     <head>
        <title>RecycleHarvard:Welcome to the Game!</title>
-       
+       <script src = "items.js"></script>
        <script type = "text/javascript">
        function random_image ()
        {
@@ -35,8 +35,8 @@
                   </tr>
              </table>               
                  <div id = "bottom">
-                    <a style = "postition:relative;left:200px" href="game.html"><img alt="Trash Can" src="Images/trashcan.jpg"></a> 
-                    <a style="position:relative:left:200px" href="game.html"><img alt="Recycling Bin" src="Images/recyclingbin.jpg"></a>
+                    <a style = "postition:relative;left:200px" href="game.html"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()"></a> 
+                    <a style="position:relative:left:200px" href="game.html"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "random_image()"></a>
                  </div>   
      </body>
   </html>   
