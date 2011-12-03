@@ -8,8 +8,8 @@
        <script src = "items.js"></script>
        <script type = "text/javascript">
        
-       // return a random number between 0 and the length of the ITEMS array
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));
+       // return a random number between 0 and the length of the ITEMS array 
+       random_integer = Math.floor(Math.random()*(ITEMS.length +1));
        
        function validate(bin)
        {   
@@ -31,6 +31,9 @@
        
        function random_image ()
        { 
+           // get a random integer
+           random_integer = Math.floor(Math.random()*(ITEMS.length +1));
+           
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
