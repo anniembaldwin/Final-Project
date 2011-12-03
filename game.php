@@ -10,7 +10,10 @@
  ***************************************************************************/
 
 // require common code
-    require_once("includes/common.php"); 
+   require_once("includes/common.php"); 
+   
+// remember session id
+   $id = $_SESSION["id"];
 ?>
 
  <!DOCTYPE html>
@@ -36,15 +39,21 @@
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
                 <?php
-                $sql = "UPDATE users SET points = points + 1";
+                $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
                 mysql_query($sql);
                 ?>
            }
                
-           // if the clicked bin is the correct bin, tell the user so
+           // if the clicked bin is the correct bin, tell the user so and subtract a point from their total
            if (status != bin)
+           {
                 document.getElementById("Correctness").innerHTML = "Incorrect";
-           
+                <?php
+                $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
+                mysql_query($sql);
+                ?>
+           }
+                
            // load a new image to the page for them to evaluate     
            random_image();
            
@@ -103,7 +112,7 @@
                     </td>
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
-                <tr id ="Points" style="text-align:center"><?= ("points") ?></tr> 
+                <tr id ="Points" style="text-align:center"><?= $points ?></tr> 
              </table>               
              <div id = "bottom">
                 <table>
