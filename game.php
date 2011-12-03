@@ -1,5 +1,18 @@
- <!------Game page------------------------------>
- 
+<?
+/****************************************************************************
+ *                               game.php
+ *
+ *                          Computer Science 50
+ *                              Final Project
+ *                              Anne Baldwin
+ *
+ *                   Allows a user to play the recycling game.
+ ***************************************************************************/
+
+// require common code
+    require_once("includes/common.php"); 
+?>
+
  <!DOCTYPE html>
 
  
