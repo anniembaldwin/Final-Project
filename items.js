@@ -331,7 +331,7 @@ var ITEMS = [
  {
   name: "tupperware",
   caption: "tupperware",
-  status: "reycycle"
+  status: "recycle"
  },
  {
   name: "plasticwaterbottle",
