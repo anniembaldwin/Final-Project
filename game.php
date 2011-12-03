@@ -8,11 +8,11 @@
        <script src = "items.js"></script>
        <script type = "text/javascript">
        
-       function validate(bin)
-       {
-           // return a random number between 0 and the length of the ITEMS array
+       // return a random number between 0 and the length of the ITEMS array
            random_integer = Math.floor(Math.random()*(ITEMS.length +1));
-           
+       
+       function validate(bin)
+       {   
            // get the loaded item's status (recyclable, disposable, or electronic recyclable)
            var status = ITEMS[random_integer].status;
            
@@ -29,9 +29,7 @@
        
         function random_image ()
         {
-           /* return a random number between 0 and the length of the ITEMS array
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));*/
-           
+          
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
