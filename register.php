@@ -39,7 +39,7 @@
           <tr>
             <td>House</td>
             <td>
-                  <select name = "house">
+                  <select name ="house">
                   <option value="House" disabled>
                   <option value="Adams">Adams House</option>
                   <option value="Cabot">Cabot House</option>

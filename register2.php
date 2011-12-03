@@ -34,7 +34,7 @@
     $result = mysql_query($sql);
 
     // make sure that username is actually unique
-    if ($result == null)
+    if (mysql_num_rows($result) == null)
         apologize("that username is already taken"); 
             
     // find out which id was assigned to that user
