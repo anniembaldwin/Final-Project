@@ -38,11 +38,7 @@
            if (status !=bin)
            {
                document.getElementById("Correctness").innerHTML = "Incorrect";
-               <?php
-                    $sql = "UPDATE users SET points = points - 1 WHERE id = $id";
-                    mysql_query($sql);
-               ?>  
-               f();
+               
            }
            
            // if the clicked bin is the correct bin, tell the user so and update their points
