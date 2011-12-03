@@ -16,7 +16,7 @@
            var name = ITEMS[random_integer].name;
            
            // define the img source
-           var picture = "Images/name.jpg";
+           var picture = "Images/" + name + ".jpg";
            
            // set the src attribute of the picture
            document.getElementById("Random Item").setAttribute("src", picture);
