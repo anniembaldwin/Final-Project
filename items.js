@@ -59,7 +59,7 @@ var ITEMS = [
   status: "trash"
  },
  {
-  name: "laratoryglass",
+  name: "labglass",
   caption: "laboratory glass",
   status: "trash"
  },
@@ -399,7 +399,7 @@ var ITEMS = [
   status: "e-waste"
  },
   {
-  name: "reyclingbin",
+  name: "recyclingbin",
   caption: "recycling bin",
   status: "recycle"
  },
