@@ -36,11 +36,11 @@
                     <img id="Random Item" alt="Item to Sort" src=""/>                      
                      </td>
                  </tr>
-                <tr id = "Caption" style="text-align:center">Caption</tr>
+                <tr id ="Caption" style="text-align:center">Caption</tr>
              </table>               
                  <div id = "bottom">
-                    <a style = "postition:relative;left:200px" href="game.html"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()"></a> 
-                    <a style="position:relative:left:200px" href="game.html"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "random_image()"></a>
+                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()"></a> 
+                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "random_image()"></a>
                  </div>   
      </body>
   </html>   
