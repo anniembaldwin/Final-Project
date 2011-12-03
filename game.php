@@ -16,8 +16,8 @@
                         <?
                         // define the directory
                         $dir = "/Images";
-                        // define the pictures in the directory
-                        $pics = glob($dir/{*.jpg});
+                        // get all the pictures in the directory
+                        $pics = glob("$dir/{*.jpg}");
                         // pic a random picture 
                         $img = $pics[rand(0,count($pics -1))];
                         // display the picture
@@ -25,9 +25,7 @@
                         ?>
                      </td>
                   </tr>
-             </table>           
-        
-     
+             </table>               
                  <div id = "bottom">
                     <a style = "postition:relative;left:200px" href="game.html"><img alt="Trash Can" src="Images/trashcan.jpg"></a> 
                     <a style="position:relative:left:200px" href="game.html"><img alt="Recycling Bin" src="Images/recyclingbin.jpg"></a>
