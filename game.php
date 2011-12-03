@@ -47,8 +47,8 @@
                 <?php
                     $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
                     mysql_query($sql);
-                ?>
-                points();
+                ?>;
+                //points();
            }
                 
            // load a new image to the page for them to evaluate     

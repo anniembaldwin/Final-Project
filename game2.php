@@ -17,10 +17,9 @@
          // prepare sql
          $sql = "SELECT points FROM users WHERE id = $id";
         
-         // execute update
+         // get selection
          mysql_query($sql);  
-       
-         return false;
+ 
        }
  ?>
 
