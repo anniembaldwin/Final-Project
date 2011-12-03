@@ -42,7 +42,6 @@
                 $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
                 mysql_query($sql);
                 ?>
-                status = bin;
            }
                
            // if the clicked bin is the correct bin, tell the user so and subtract a point from their total
@@ -59,7 +58,6 @@
            random_image();
            
            // recalculate the user's total points
-           points();  
            return false; 
        }      
        
@@ -120,7 +118,7 @@
                     <tr>
                         <td><a style ="postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
                         <td><a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a><td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a><td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
