@@ -114,7 +114,7 @@ var ITEMS = [
   status: "trash"
  },
  {
-  "rubberbands",
+  name:"rubberbands",
   caption: "rubber bands",
   status: "trash"
  },
