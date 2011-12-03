@@ -38,27 +38,19 @@
            if (status == bin)
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
-                <?php
-                $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
-                mysql_query($sql);
-                ?>
            }
                
            // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
            if (status != bin)
            {
-                document.getElementById("Correctness").innerHTML = "Incorrect";
-                <?php/*
-                $sql = "UPDATE users SET points = points -3 WHERE id = $id";
-                mysql_query($sql);
-                */?>
+               document.getElementById("Correctness").innerHTML = "Incorrect";    
            }
                 
            // load a new image to the page for them to evaluate     
            random_image();
            
            // recalculate the user's total points
-           //points();  
+           points();  
            return false; 
        }      
        
