@@ -14,6 +14,7 @@
 
     // escape username and passwords to avoid SQL injection attacks
     $username = mysql_real_escape_string($_POST["username"]);
+    $house = mysql_real_escape_string($_POST["house"]);
     
     // make sure that $_POST["username"] or $_POST["password"] is blank, return to apology page
     if (empty($username)  || empty($_POST["password"]))
@@ -27,7 +28,7 @@
         apologize("please make sure both passwords are the same"); 
     
     // prepare SQL
-    $sql = "INSERT INTO users (username, hash, house) VALUES('$username', '$hash', '$_POST[house]')";
+    $sql = "INSERT INTO users (username, hash, house) VALUES('$username', '$hash', '$house')";
     
     // execute insertion
     $result = mysql_query($sql);
