@@ -12,9 +12,9 @@
     // require common code
     require_once("includes/common.php"); 
 
-    // escape username and password to avoid SQL injection attacks
+    // escape username to avoid SQL injection attacks
     $username = mysql_real_escape_string($_POST["username"]);
-    $password = mysql_real_escape_string($_POST["password"]);
+    $password = $_POST["password"];
     
     // prepare SQL
     $sql = "SELECT * FROM users WHERE username='$username'";
@@ -29,7 +29,7 @@
         $row = mysql_fetch_array($result);
 
         // compare hash of user's input against hash that's in database
-        if (crypt($_password, $row["hash"]) == $row["hash"])
+        if (crypt($password, $row["hash"]) == $row["hash"])
         {
             // remember that user's now logged in by caching user's ID in session
             $_SESSION["id"] = $row["id"];
