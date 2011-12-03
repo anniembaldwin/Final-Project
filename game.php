@@ -19,8 +19,9 @@
                         // find all the pictures in the directory
                         $pictures = glob("$dir/{*.jpg}"); 
                         // find randomized pictures
-                        $img = $pictures[mt_rand(0,count($pictures)-3)]; 
-                        echo "<img src=\"".$img."\">";
+                        /*$img = $pictures[mt_rand(0,count($pictures)-3)]; 
+                        echo "<img src=\"".$img."\">";*/
+                        echo count($pictures);
                         ?>
                      </td>
                   </tr>
