@@ -37,7 +37,7 @@
             <td><input name="name" type="text"></td>
           </tr>
           <tr>
-            <td>House:</td>
+            <td>House:
             <select name = "house">
                   <option value="House" disabled>
                   <option value="Adams">Adams House</option>
@@ -53,6 +53,7 @@
                   <option value="Quincy">Quincy House</option>
                   <option value="Winthrop">Winthrop House</option>
             </select>
+            </td>
           </tr>
           <tr>
             <td>Username:</td>

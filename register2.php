@@ -15,16 +15,12 @@
     // escape username and passwords to avoid SQL injection attacks
     $username = mysql_real_escape_string($_POST["username"]);
     
-    // define a hash of the password
-    $hash = crypt($password);
-    
-    // make sure that username is actually unique
-    if ($result == NULL)
-        apologize("that username is already taken"); 
-    
     // make sure that $_POST["username"] or $_POST["password"] is blank, return to apology page
-    if (empty($username)  || empty($password))
+    if (empty($username)  || empty($_POST["password"]))
         apologize("please fill in all required fields"); 
+   
+    // define a hash of the password
+    $hash = crypt($_POST["password"]); 
     
    // make sure that both passwords are the same
     if ($password != $password2)
@@ -35,7 +31,11 @@
     
     // execute insertion
     $result = mysql_query($sql);
-    
+
+    // make sure that username is actually unique
+    if ($result == NULL)
+        apologize("that username is already taken"); 
+            
     // find out which id was assigned to that user
     $id = mysql_insert_id();
     
