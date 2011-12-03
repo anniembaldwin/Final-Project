@@ -32,11 +32,11 @@
            
            // if the clicked bin is the correct bin, tell the user so
            if (status == bin)
-                document.getElementById("Correctness").innerHTML = Correct!;
+                document.getElementById("Correctness").innerHTML = Correct;
            
            // if the clicked bin is the correct bin, tell the user so
            if (status != bin)
-                document.getElementById("Correctness").innerHTML = Incorrect!;
+                document.getElementById("Correctness").innerHTML = Incorrect;
        }      
        </script>
     </head>
