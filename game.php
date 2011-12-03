@@ -14,14 +14,10 @@
                 <tr align = "center">
                     <td>
                         <?
-                        // define the directory
-                        $dir = "/Images";
-                        // get all the pictures in the directory
-                        $pics = glob("$dir/{*.jpg}");
-                        // pic a random picture 
-                        $img = $pics[rand(0,count($pics) - 1)];
-                        // display the picture
-                        echo '<img src="' . $img . '">';
+                        $dir = "/Images"; // name of the directory 
+                        $pictures = glob("$dir/{*.jpg}"); 
+                        $img = $pictures[rand(0,count($pictures)-1)]; 
+                        echo "<img src=\"".$img."\">";
                         ?>
                      </td>
                   </tr>
