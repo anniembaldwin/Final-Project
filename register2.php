@@ -17,18 +17,18 @@
     $house = mysql_real_escape_string($_POST["house"]);
     
     // make sure that $_POST["username"] or $_POST["password"] is blank, return to apology page
-    if (empty($username)  || empty($_POST["password"]))
+    if (empty($username)  || empty($_POST["password"]) || empty($house))
         apologize("please fill in all required fields"); 
    
     // define a hash of the password
     $hash = crypt($_POST["password"]); 
     
    // make sure that both passwords are the same
-    if ($password != $password2)
+    if ($_POST["password"] != $_POST["password2"])
         apologize("please make sure both passwords are the same"); 
     
     // prepare SQL
-    $sql = "INSERT INTO users (username, hash, house) VALUES('$username', '$hash', '$house')";
+    $sql = "INSERT INTO users (username, hash, house) VALUES ('$username', '$hash', '$house')";
     
     // execute insertion
     $result = mysql_query($sql);
