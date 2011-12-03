@@ -25,7 +25,7 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        
-       function validate (bin)
+       function validate(bin)
        {
            // get the loaded item's status (recyclable, disposable, or electronic recyclable)
            var status = ITEMS[random_integer].status;
@@ -37,6 +37,8 @@
            // if the clicked bin is the correct bin, tell the user so
            if (status != bin)
                 document.getElementById("Correctness").innerHTML = "Incorrect";
+                
+           random_image();
        }      
        </script>
     </head>
@@ -55,8 +57,8 @@
                 <tr id= "Caption" style="text-align:center"> </tr>
              </table>               
              <div id = "bottom">
-                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()" onclick = "validate(trash)"></a> 
-                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "random_image()" onclick = "validate(recycle)"></a>
+                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "validate(trash)"></a> 
+                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "validate(recycle)"></a>
              </div>   
      </body>
   </html>   
