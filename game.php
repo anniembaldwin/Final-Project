@@ -52,8 +52,8 @@
                 
            // load a new image to the page for them to evaluate     
            random_image();
-           // call the points function for some unknown reason
-           points();  
+           
+           // return false
            return false; 
        }      
        
