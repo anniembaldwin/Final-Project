@@ -27,9 +27,8 @@
            random_image();
        }      
        
-        function random_image ()
-        {
-          
+       function random_image ()
+       { 
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
@@ -61,6 +60,7 @@
              <div id = "bottom">
                     <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "validate('trash');"></a> 
                     <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "validate('recycle');"></a>
+                    <a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin Bin" src="Images/electronicrecycling.jpg" onclick = "validate('e-waste');"></a>
              </div>   
      </body>
   </html>   

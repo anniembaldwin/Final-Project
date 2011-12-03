@@ -409,8 +409,8 @@ var ITEMS = [
   status: "trash"
  },
   {
-  name: "buildingmanager",
-  caption: "building manager",
+  name: "electronicrecycling",
+  caption: "electronic recycling",
   status: "e-waste"
  },
 ]
