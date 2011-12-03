@@ -29,7 +29,7 @@
     
     // prepare SQL
 //    $sql = "INSERT INTO users (username, hash, house) VALUES ('$username', '$hash', '$house')";
-    $sql = "INSERT INTO users (username, hash, house) VALUES ('a', 'b', 'c')";
+    $sql = "INSERT INTO users (points) VALUES (100)";
   
     // execute insertion
     $result = mysql_query($sql);
