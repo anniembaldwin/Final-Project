@@ -48,16 +48,17 @@
            if (status != bin)
            {
                 document.getElementById("Correctness").innerHTML = "Incorrect";
-                <?php
+                /*<?php
                 $sql = "UPDATE users SET points = points -3 WHERE id = $id";
                 mysql_query($sql);
-                ?>
+                ?>*/
            }
                 
            // load a new image to the page for them to evaluate     
            random_image();
            
            // recalculate the user's total points
+           //points();  
            return false; 
        }      
        
