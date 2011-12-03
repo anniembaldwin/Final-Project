@@ -40,8 +40,7 @@
                 document.getElementById("Correctness").innerHTML = "Correct";
                 <?php
                     $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
-                    mysql_query($sql);
-                ?>
+                    mysql_query($sql);?>
                 f();
            }
            
@@ -49,11 +48,11 @@
            if (status !=bin)
            {
                document.getElementById("Correctness").innerHTML = "Incorrect";
-               <?php
+               /*<?php
                     $sql = "UPDATE users SET points = points -2 WHERE id = '$id'";
                     mysql_query($sql);
                ?>
-               g();
+               g();*/
            }
                 
            // load a new image to the page for them to evaluate     
