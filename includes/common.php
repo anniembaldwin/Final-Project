@@ -15,7 +15,7 @@
     error_reporting(E_ALL ^ E_NOTICE);
 
     // enable sessions, restricting cookie to /~abaldwin/finalproject/
-    if (preg_match("{^(/~[^/]+/abaldwin_finalproject/)}", $_SERVER["REQUEST_URI"], $matches))
+    if (preg_match("{^(/~[^/]+/abaldwin/)}", $_SERVER["REQUEST_URI"], $matches))
         session_set_cookie_params(0, $matches[1]);
     session_start();
 
