@@ -46,7 +46,7 @@
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
                 <tr align = "center">
-                    <td id = "Correctness" style = "color:green"></td>
+                    <td id = "Correctness" style = "color:green">Blank</td>
                 <tr>    
                     <td>
                     <img id="Random Item" alt="Item to Sort" src=""/>                      
