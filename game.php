@@ -42,6 +42,7 @@
                 $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
                 mysql_query($sql);
                 ?>
+                status = bin;
            }
                
            // if the clicked bin is the correct bin, tell the user so and subtract a point from their total
