@@ -63,9 +63,18 @@
                 <tr id= "Caption" style="text-align:center"> </tr>
              </table>               
              <div id = "bottom">
-                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a> 
-                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a>
-                    <a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a>
+                <table>
+                    <tr>
+                        <td><a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
+                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a><td>
+                    </tr>
+                    <tr>
+                        <td>Trash Can</td>
+                        <td>Recycling Bin</td>
+                        <td>Electronic Recycling</td>
+                    </tr>
+                </table>
              </div>   
      </body>
   </html>   
