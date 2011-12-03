@@ -7,26 +7,12 @@
        <title>RecycleHarvard:Welcome to the Game!</title>
        <script src = "items.js"></script>
        <script type = "text/javascript">
-       function random_image ()
+       
+       function validate(bin)
        {
            // return a random number between 0 and the length of the ITEMS array
            random_integer = Math.floor(Math.random()*(ITEMS.length +1));
            
-           // find the corresponding name in the array
-           var name = ITEMS[random_integer].name;
-           
-           // define the img source
-           var picture = "Images/" + name + ".jpg";
-           
-           // set the src attribute of the picture
-           document.getElementById("Random Item").setAttribute("src", picture);
-           
-           // set the caption attribute of the picture
-           document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
-       }
-       
-       function validate(bin)
-       {
            // get the loaded item's status (recyclable, disposable, or electronic recyclable)
            var status = ITEMS[random_integer].status;
            
@@ -40,6 +26,24 @@
                 
            random_image();
        }      
+       
+        function random_image ()
+        {
+           /* return a random number between 0 and the length of the ITEMS array
+           random_integer = Math.floor(Math.random()*(ITEMS.length +1));*/
+           
+           // find the corresponding name in the array
+           var name = ITEMS[random_integer].name;
+           
+           // define the img source
+           var picture = "Images/" + name + ".jpg";
+           
+           // set the src attribute of the picture
+           document.getElementById("Random Item").setAttribute("src", picture);
+           
+           // set the caption attribute of the picture
+           document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
+       }
        </script>
     </head>
         <body onload = "random_image()">
