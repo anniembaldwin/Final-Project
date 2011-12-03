@@ -22,7 +22,7 @@
            document.getElementById("Random Item").setAttribute("src", picture);
            
            // set the caption attribute of the picture
-           document.getElementById("Caption").innerHTML = name;
+           document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        </script>
     </head>
@@ -36,7 +36,7 @@
                     <img id="Random Item" alt="Item to Sort" src=""/>                      
                      </td>
                  </tr>
-                <tr id ="Caption" style="text-align:center">Caption</tr>
+                <tr style="text-align:center">Caption</tr>
              </table>               
                  <div id = "bottom">
                     <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()"></a> 
