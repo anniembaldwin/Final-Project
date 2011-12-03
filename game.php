@@ -19,7 +19,7 @@
                         // get all the pictures in the directory
                         $pics = glob("$dir/{*.jpg}");
                         // pic a random picture 
-                        $img = $pics[rand(0,count($pics) - 1))];
+                        $img = $pics[rand(0,count($pics) - 1)];
                         // display the picture
                         echo '<img src="' . $img . '">';
                         ?>
