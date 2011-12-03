@@ -24,7 +24,7 @@ var ITEMS = [
   status: "trash"
  },
  {
-  name: "candywrapper"
+  name: "candywrapper",
   caption: "candy wrapper",
   status: "trash"
  },
