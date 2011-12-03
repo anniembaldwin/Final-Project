@@ -5,6 +5,19 @@
  <html>
     <head>
        <title>RecycleHarvard:The Game!</title>
+       <script type = "text/javascript">
+       function random_image ()
+       {
+           // return a random number between 0 and the length of the ITEMS array
+           var random_integer = Math.floor(Math.random()*(ITEMS.length +1));
+           
+           // find the corresponding name in the array
+           var name = ITEMS[random_integer].name;
+           
+           // define the img source
+           return "Images/name.jpg"
+       }
+       </script>
     </head>
         <body>
             <h1>Play the Game</h1>
@@ -13,16 +26,7 @@
             <table align = "center">
                 <tr align = "center">
                     <td>
-                        <?
-                        // define name of directory
-                        $dir = "Images"; 
-                        // find all the pictures in the directory
-                        $pictures = glob("$dir/{*.jpg}"); 
-                        // find randomized pictures
-                        /*$img = $pictures[mt_rand(0,count($pictures)-3)]; 
-                        echo "<img src=\"".$img."\">";*/
-                        echo count($pictures);
-                        ?>
+                    <img alt="Random item" src="random_image()"/>                      
                      </td>
                   </tr>
              </table>               
