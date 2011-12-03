@@ -57,8 +57,8 @@
                 <tr id= "Caption" style="text-align:center"> </tr>
              </table>               
              <div id = "bottom">
-                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "validate(trash);"></a> 
-                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "validate(recycle);"></a>
+                    <a style = "postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "validate('trash');"></a> 
+                    <a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "validate('recycle');"></a>
              </div>   
      </body>
   </html>   
