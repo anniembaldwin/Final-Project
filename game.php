@@ -38,8 +38,11 @@
            if (status == bin)
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
-                
-                points(1);
+                <?php
+                    $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
+                    mysql_query($sql);
+                ?>
+                points();
            }
                
            // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
