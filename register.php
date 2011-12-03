@@ -76,7 +76,7 @@
     </div>
 
     <div id="bottom">
-      or <a href="login.php">login</a> for an account
+      
     </div>
 
   </body>
