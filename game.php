@@ -1,10 +1,11 @@
- <!------Game page---->
+ <!------Game page------------------------------>
  
  <!DOCTYPE html>
  
  <html>
     <head>
-       <title>RecycleHarvard:The Game!</title>
+       <title>RecycleHarvard:Welcome to the Game!</title>
+       
        <script type = "text/javascript">
        function random_image ()
        {
@@ -15,18 +16,21 @@
            var name = ITEMS[random_integer].name;
            
            // define the img source
-           return "Images/name.jpg"
+           var picture = "Images/name.jpg";
+           
+           // set the src attribute of the picture
+           document.GetElementById("Random Item").SetAttribute("src", "picture");
        }
        </script>
     </head>
-        <body>
+        <body onload = "random_image()">
             <h1>Play the Game</h1>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
                 <tr align = "center">
                     <td>
-                    <img alt="Random item" src="random_image()"/>                      
+                    <img id="Random item" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
                      </td>
                   </tr>
              </table>               
