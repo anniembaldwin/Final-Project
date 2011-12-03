@@ -20,6 +20,9 @@
            
            // set the src attribute of the picture
            document.getElementById("Random Item").setAttribute("src", picture);
+           
+           // set the caption attribute of the picture
+           document.getElementById("Caption").innerHTML = name;
        }
        </script>
     </head>
@@ -32,7 +35,8 @@
                     <td>
                     <img id="Random Item" alt="Item to Sort" src=""/>                      
                      </td>
-                  </tr>
+                 </tr>
+                <tr id = "Caption" style="text-align:center">Caption</tr>
              </table>               
                  <div id = "bottom">
                     <a style = "postition:relative;left:200px" href="game.html"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "random_image()"></a> 
