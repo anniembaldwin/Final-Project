@@ -37,6 +37,7 @@
             <td><input name="name" type="text"></td>
           </tr>
           <tr>
+            <td>House</td>
             <td>
                   <select name = "house">
                   <option value="House" disabled>
