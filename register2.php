@@ -28,8 +28,9 @@
     $hash = crypt($_POST["password"]); 
     
     // prepare SQL
-    $sql = "INSERT INTO users (username, hash, house) VALUES ('$username', '$hash', '$house')";
-    
+//    $sql = "INSERT INTO users (username, hash, house) VALUES ('$username', '$hash', '$house')";
+    $sql = "INSERT INTO users (username, hash, house) VALUES ('a', 'b', 'c')";
+  
     // execute insertion
     $result = mysql_query($sql);
 
