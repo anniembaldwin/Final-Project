@@ -9,6 +9,8 @@
  *                        Allows a user to login.
  ***************************************************************************/
 
+// require common code
+    require_once("includes/common.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +24,7 @@
   <body>
 
     <div id="top">
+       Log in!
       <a href="index.php"><img alt="C$50 Finance" src="Images/logo.gif"></a>
     </div>
 
@@ -45,6 +48,7 @@
 
     <div id="bottom">
       Don't have an account yet? <a href="register.php">register</a> for an account
+      <br>
       <a href="singlestream.html">Single Stream Recycling</a>
       |
       <a href="erecycle.html">Electronic Recycling</a>

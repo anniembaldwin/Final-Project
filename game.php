@@ -75,6 +75,18 @@
                         <td style ="text-align:center">Electronic Recycling</td>
                     </tr>
                 </table>
+                      <a href="singlestream.html">Single Stream Recycling</a>
+                      |
+                      <a href="erecycle.html">Electronic Recycling</a>
+                      |
+                      <a href="whyrecycle.html">Why Recycle?</a>
+                      |
+                      <a href="game.php">Play the game!</a>
+                      |
+                      <a href="login.php">Login!</a>
+                      |
+                      <a href="logout.php" style="font-weight: bold">Log Out</a>
+                     
              </div>   
      </body>
   </html>   
