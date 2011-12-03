@@ -49,7 +49,11 @@
            if (status !=bin)
            {
                document.getElementById("Correctness").innerHTML = "Incorrect";
-               
+               <?php
+                    $sql = "UPDATE users SET points = points -2 WHERE id = $id";
+                    mysql_query($sql);
+               ?>
+               g();
            }
                 
            // load a new image to the page for them to evaluate     
