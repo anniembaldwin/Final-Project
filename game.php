@@ -15,7 +15,7 @@
                     <td>
                         <?
                         // define name of directory
-                        $dir = "/Images"; 
+                        $dir = "Images"; 
                         // find all the pictures in the directory
                         $pictures = glob("$dir/{*.jpg}"); 
                         // find randomized pictures
