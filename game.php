@@ -44,7 +44,7 @@
                 ?>
            }
                
-           // if the clicked bin is the correct bin, tell the user so and subtract a point from their total
+           // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
            if (status != bin)
            {
                 document.getElementById("Correctness").innerHTML = "Incorrect";
