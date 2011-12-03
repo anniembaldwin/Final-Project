@@ -35,10 +35,10 @@
            if (status == bin)
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
-                /*<?php
+                <?php
                 $sql = "UPDATE users SET points = points + 1";
                 mysql_query($sql);
-                ?>*/
+                ?>
            }
                
            // if the clicked bin is the correct bin, tell the user so
@@ -79,7 +79,7 @@
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
-                <?/*
+                <?
                      // remember the user's id from session id
                      $id = $_SESSION["id"];
                      
@@ -93,7 +93,7 @@
                      $row = mysql_fetch_array($result); 
                      
                      // access points
-                     $points = $row["points"];*/
+                     $points = $row["points"];
                 ?>
                 <tr align = "center">
                     <td id ="Correctness" style ="color:green"></td>
