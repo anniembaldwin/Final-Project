@@ -110,7 +110,7 @@
                 <tr id= "Caption" style="text-align:center"></tr>
                 <tr></tr>
                 <tr id ="Points" style="text-align:center">
-                    <td>You have<?= $points ?>points</td>
+                    <td>You have <?= $points ?> points</td>
                  </tr>    
              </table>               
              <div id = "bottom">
