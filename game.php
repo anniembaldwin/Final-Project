@@ -39,7 +39,7 @@
            {
                 document.getElementById("Correctness").innerHTML = "Correct";
                 <?php
-                    $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
+                    $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
                     mysql_query($sql);
                 ?>
                 f();
@@ -50,7 +50,7 @@
            {
                document.getElementById("Correctness").innerHTML = "Incorrect";
                <?php
-                    $sql = "UPDATE users SET points = points -2 WHERE id = $id";
+                    $sql = "UPDATE users SET points = points -2 WHERE id = '$id'";
                     mysql_query($sql);
                ?>
                g();
