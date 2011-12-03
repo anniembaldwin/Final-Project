@@ -24,7 +24,7 @@
        </script>
     </head>
         <body onload = "random_image()">
-            <h1>Play the Game</h1>
+            <h1>Play the Game! WEeee</h1>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
