@@ -191,7 +191,7 @@ var ITEMS = [
  {
   name: "detergentbottle",
   caption: "detergent bottle",
-  status: "reycycle"
+  status: "recycle"
  },
  {
   name: "foiltakeoutbox",
@@ -226,7 +226,7 @@ var ITEMS = [
  {
   name: "juicebox",
   caption: "juice box",
-  status: "reycycle"
+  status: "recycle"
  },
  {
   name: "junkmail",
@@ -296,7 +296,7 @@ var ITEMS = [
  {
   name: "envelope",
   caption: "envelope",
-  status: "reycycle"
+  status: "recycle"
  },
  {
   name: "shreddedpaper",
