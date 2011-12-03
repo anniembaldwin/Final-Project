@@ -58,7 +58,7 @@
            random_image();
            
            // recalculate the user's total points
-           points();  
+           //points();  
            return false; 
        }      
        
