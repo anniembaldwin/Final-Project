@@ -64,7 +64,7 @@ var ITEMS = [
   status: "trash"
  },
  {
-  "laminatedpaper",
+  name: "laminatedpaper",
   caption: "laminated paper",
   status: "trash"
  },
