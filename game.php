@@ -30,7 +30,7 @@
             <table align = "center">
                 <tr align = "center">
                     <td>
-                    <img id="Random item" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
+                    <img id="Random Item" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
                      </td>
                   </tr>
              </table>               
