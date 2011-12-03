@@ -25,7 +25,7 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        
-       function validate (bin)
+       /*function validate (bin)
        {
            // get the loaded item's status (recyclable, disposable, or electronic recyclable)
            var status = ITEMS[random_integer].status;
@@ -37,7 +37,7 @@
            // if the clicked bin is the correct bin, tell the user so
            if (status != document.getElementById("bin").alt)
                 document.getElementById("Correctness").innerHTML = Incorrect!;
-       }         
+       }     */    
        </script>
     </head>
         <body onload = "random_image()">
