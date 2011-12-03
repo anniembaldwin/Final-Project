@@ -47,7 +47,13 @@
                 <?php
                     $sql = "UPDATE users SET points = points + 1 WHERE id = $id";
                     mysql_query($sql);
-                ?>;
+                    // remember the user's id from session id
+                    $id = $_SESSION["id"];
+                    // prepare sql
+                    $sql = "SELECT points FROM users WHERE id = $id";
+                    // get selection
+                    mysql_query($sql);
+                ?>
                 //points();
            }
                 
