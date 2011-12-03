@@ -70,9 +70,9 @@
                         <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a><td>
                     </tr>
                     <tr>
-                        <td>Trash Can</td>
-                        <td>Recycling Bin</td>
-                        <td>Electronic Recycling</td>
+                        <td style ="text-align:center">Trash Can</td>
+                        <td style ="text-align:center">Recycling Bin</td>
+                        <td style ="text-align:center">Electronic Recycling</td>
                     </tr>
                 </table>
              </div>   
