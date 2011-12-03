@@ -19,7 +19,7 @@
            var picture = "Images/name.jpg";
            
            // set the src attribute of the picture
-           document.GetElementById("Random Item").SetAttribute("src", "picture");
+           document.getElementById("Random Item").setAttribute("src", "picture");
        }
        </script>
     </head>
