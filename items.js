@@ -313,11 +313,7 @@ var ITEMS = [
   caption: "stamp",
   status: "recycle"
  },
-  {
-  nam: "starbuckscup",
-  caption: "Starbucks cup",
-  status: "recycle"
- },
+
  {
   name: "starbucksfrappuccinobottle",
   caption: "Starbucks frappuccino bottle",
