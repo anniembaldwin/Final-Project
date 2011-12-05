@@ -171,7 +171,7 @@ var ITEMS = [
  {
   name: "beerbottle",
   caption: "beer bottle",
-  status: "reycle"
+  status: "recycle"
  },  
  {
   name: "bottlecap",
@@ -379,7 +379,7 @@ var ITEMS = [
   status: "e-waste"
  },
  {
-  name: "DVDplayer", 
+  name: "dvdplayer", 
   caption: "DVD player",
   status: "e-waste"
  },
@@ -398,19 +398,5 @@ var ITEMS = [
   caption: "television",
   status: "e-waste"
  },
-  {
-  name: "recyclingbin",
-  caption: "recycling bin",
-  status: "recycle"
- },
- {
-  name: "trashcan",
-  caption: "trash can",
-  status: "trash"
- },
-  {
-  name: "electronicrecycling",
-  caption: "electronic recycling",
-  status: "e-waste"
- },
+
 ]
