@@ -4,7 +4,7 @@
  *
  *                          Computer Science 50
  *                              Problem Set 7
- *                              Anne Baldwin
+ *                      Anne Baldwin and Natalie Jacewicz
  *
  *          Support the interface for a user to play a game.           
  ***************************************************************************/
