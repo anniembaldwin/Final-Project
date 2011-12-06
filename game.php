@@ -4,7 +4,7 @@
  *
  *                          Computer Science 50
  *                              Final Project
- *                              Anne Baldwin
+ *                     Anne Baldwin and Natalie Jacewicz
  *
  *                   Allows a user to play the recycling game.
  ***************************************************************************/

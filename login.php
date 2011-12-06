@@ -25,7 +25,7 @@
 
     <div id="top">
        Log in!
-      <a href="index.php"><img alt="C$50 Finance" src="Images/logo.gif"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/beerbottle.gif"></a>
     </div>
 
     <div id="middle">
