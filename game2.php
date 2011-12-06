@@ -9,19 +9,32 @@
  *          Support the interface for a user to play a game.           
  ***************************************************************************/
 <? 
-        function points()
-        {
-         // remember the user's id from session id
-         $id = $_SESSION["id"];
-         
-         // prepare sql
-         $sql = "SELECT points FROM users WHERE id = $id";
-        
-         // get selection
-         mysql_query($sql);  
- 
-       }
- ?>
+   require("common.php"); 
+      function validate(bin)
+       {   
+           // get the loaded item's status (recyclable, disposable, or electronic recyclable)
+           var status = ITEMS[random_integer].status;
+           
+           // if the clicked bin is the correct bin, tell the user so and update their points
+           if (status == bin)
+           {
+                    $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
+                    mysql_query($sql);
+                return 0;
+           }
+           
+           // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
+           if (status !=bin)
+           {
+               $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
+               mysql_query($sql);
+               return 1;
+              
+           }
+           
+           // return false
+           return false; 
+       }      
 
 
 

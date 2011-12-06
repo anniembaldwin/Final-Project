@@ -14,6 +14,7 @@
    
 // remember session id
    $id = $_SESSION["id"];
+   
 ?>
 
  <!DOCTYPE html>
@@ -23,40 +24,32 @@
     <head>
        <title>RecycleHarvard:Welcome to the Game!</title>
        <script src = "items.js"></script>
+       <script src = "jquery.js"></script>
        <script type = "text/javascript">
        
        // return a random number between 0 and the length of the ITEMS array 
        random_integer = Math.floor(Math.random()*(ITEMS.length +1));
        
-       // validate whether a user's choice of receptacle is correct, and tell them so
-       function validate(bin)
-       {   
-           // get the loaded item's status (recyclable, disposable, or electronic recyclable)
-           var status = ITEMS[random_integer].status;
-           
-           // if the clicked bin is the correct bin, tell the user so and update their points
-           if (status == bin)
-           {
-                document.getElementById("Correctness").innerHTML = "Correct";
-                <?php
-                    $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
-                    mysql_query($sql);?>
-                f();
-           }
-           
-           // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
-           if (status !=bin)
-           {
-               document.getElementById("Correctness").innerHTML = "Incorrect";
-              
-           }
-                
-           // load a new image to the page for them to evaluate     
-           random_image();
-           
-           // return false
-           return false; 
-       }      
+       // call validate function and assign points accordingly
+       $(document).ready(function(){
+        $("img").click(function(){
+            $.get("game2.php", function(correctness){
+            
+                if(correctness == 0)
+                {
+                    document.getElementByID("Correctness").innerHTML = "Correct";
+                }
+                else if(correctness == 1)
+                {
+                    document.getElementById("Correctness").innerHTML = "Incorrect";
+                }
+                });
+                // load a new image to the page for them to evaluate     
+                random_image();
+         });
+       }
+       
+       
        
        // load a random image to be sorted to the page
        function random_image ()
