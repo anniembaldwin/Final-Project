@@ -50,7 +50,7 @@
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        
-           // points
+           // reload the person's points
             <?php
                      // remember the user's id from session id
                      $id = $_SESSION["id"];
@@ -65,8 +65,7 @@
                      $row = mysql_fetch_array($result); 
                      
                      // access points
-                     $points = $row["points"];
-            ?>
+                     $points = $row["points"]; ?>
        }
        
        
@@ -89,31 +88,32 @@
       
       // if the recycle image is clicked, validate
       $("img.recycle").click(function() {
-            console.log("does this click work");
+            
             // we want to store the values of the clicked receptacle and the status of the bin  
             var bin = $("img.recycle").attr('alt'); 
             console.log($("this")); 
-            console.log(bin);
+            
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
-            console.log("did this work?")            
+                       
             // load a new image to the page for them to evaluate     
             random_image();
             });
                      
       });
-     // if the recycle image is clicked, validate
+     
+     // if the ewaste image is clicked, validate
      $("img.ewaste").click(function() {
-            console.log("does this click work");
+            
             // we want to store the values of the clicked receptacle and the status of the bin  
             var bin = $("img.ewaste").attr('alt'); 
             console.log($("this")); 
-            console.log(bin);
+            
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
-            console.log("did this work?")            
+                     
             // load a new image to the page for them to evaluate     
             random_image();
             });
