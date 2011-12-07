@@ -52,7 +52,7 @@
        
        // after the pages is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
-            ///$("#receptacle").click(function() {
+            $("img.receptacle").click(function() {
             
             // we want to store the values of the receptacle and the status of the bin  
             var bin = $('#receptacle').attr('alt');  
@@ -61,12 +61,14 @@
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
             });
-      //});
+         
+            // load a new image to the page for them to evaluate     
+            random_image();
+      });
      
  });  
   
-        // load a new image to the page for them to evaluate     
-        //random_image();
+       
 
      </script>
     </head>
@@ -108,9 +110,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" alt="trash" src="Images/trashcan.jpg"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img id= "receptacle" alt="recycle" src="Images/recyclingbin.jpg"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img id="receptacle" alt="e-waste" src="Images/ewaste.jpg"></a></td>
+                        <td><a style ="postition:relative;left:200px" href="game.php"><img class="receptacle" alt="trash" src="Images/trashcan.jpg"></a></td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img class="receptacle" alt="recycle" src="Images/recyclingbin.jpg"></a></td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img class="receptacle" alt="e-waste" src="Images/ewaste.jpg"></a></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
