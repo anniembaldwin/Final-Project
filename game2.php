@@ -16,6 +16,8 @@
 // store the bin and status values
     $bin = $_GET[bin];
     $status = $_GET[status]; 
+
+dump($bin);
     
 // if the clicked bin is the correct bin, tell the user so and update their points
 if ($bin == $status)
