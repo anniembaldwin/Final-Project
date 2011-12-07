@@ -39,9 +39,9 @@ if ($bin == $status)
      // access points
      $points = $row["points"];
      
-     print("That's correct");
+     //print("That's correct");
      // return correctness and points
-    //print("{correct: 'You're correct!', points: $points}");
+    print("{correct: 'You're correct!', points: $points}");
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
@@ -62,9 +62,9 @@ if ($bin != $status)
     // access points
     $points = $row["points"];
     
-    print("That's incorrect"); 
+    //print("That's incorrect"); 
      // return correctness and points
-    //print("{correct: 'That's incorrect!', points: $points}");
+    print("{correct: 'That's incorrect!', points: $points}");
 }      
 
 
