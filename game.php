@@ -48,14 +48,10 @@
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
-           
-           // test
-       document.getElementByID("Correctness").innerHTML = "Correct";
        }
        
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
-       
        
        
        // check whether the clicked bin is the correct one
@@ -66,13 +62,13 @@
            if(status == bin)
            {
                 $.get("game2.php?success=0");
-                document.getElementByID("Correctness").innerHTML = "Correct";
+                document.getElementById("Correctness").innerHTML = "Correct";
                 
            }
            else if(status != bin)
            {
                $.get("game2.php?success=1");
-                document.getElementByID("Correctness").innerHTML = "Incorrect";
+                document.getElementById("Correctness").innerHTML = "Incorrect";
            }
            
            // load a new image to the page for them to evaluate     
