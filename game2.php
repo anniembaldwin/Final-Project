@@ -23,7 +23,7 @@ if ($bin == $status)
 {
      $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
      mysql_query($sql);
-     return true;
+     return "THIS IS A STRING";
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
@@ -31,7 +31,7 @@ if ($bin != $status)
 {
     $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
     mysql_query($sql);       
-    return false;
+    return "THAT IS A STRING";
 }      
 
 ?>

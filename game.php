@@ -62,8 +62,7 @@
                 $("#Correctness").html(result);
             });
       });
-      // always return false
-      return false;  
+      
  });  
   
         // load a new image to the page for them to evaluate     
