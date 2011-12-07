@@ -28,8 +28,8 @@
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
         
-        // return a random number between 0 and the length of the ITEMS array 
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
+       // return a random number between 0 and the length of the ITEMS array 
+          random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
         
        
        // load a random image to be sorted to the page
