@@ -50,24 +50,22 @@
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
        
-       // after the pages is loaded and one of the receptacles is clicked, run the validation
+       // after the page is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
-            $("img.receptacle").click(function() {
+            $("img.trash").click(function() {
             console.log("does this click work");
             // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.receptacle").attr('alt'); 
+            var bin = $("img.trash").attr('alt'); 
             console.log($("this")); 
             console.log(bin);
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
-            console.log("did this work?")
-            
+            console.log("did this work?")            
             // load a new image to the page for them to evaluate     
             random_image();
             });
-         
-            
+                     
       });
      
  });  
@@ -114,9 +112,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img class="receptacle" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img class="receptacle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img class="receptacle" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img class="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
