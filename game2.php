@@ -14,8 +14,8 @@
    require("includes/common.php"); 
 
 // store the bin and status values
-    $bin = $_GET['bin'];
-    $status = $_GET['status']; 
+    $bin = $_GET["bin"];
+    $status = $_GET["status"]; 
 
 dump($_GET["bin"]);
     
@@ -32,7 +32,7 @@ if ($bin != $status)
 {
     $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
     mysql_query($sql);       
-    return "That's incorrect'";
+    return "That's incorrect";
 }      
 
 
