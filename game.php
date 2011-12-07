@@ -61,7 +61,7 @@
            
            if(status == bin)
            {
-                $.get("game2.php?correctness=0");
+                $.get("game2.php", {correctness:"yes"});
                 document.getElementById("Correctness").innerHTML = "Correct";
                 
            }
