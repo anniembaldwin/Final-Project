@@ -59,10 +59,10 @@
             
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
+                $("#Correctness").html("result");
             });
       });
-    $("#Correctness").html("hello");  
+     
  });  
   
         // load a new image to the page for them to evaluate     
