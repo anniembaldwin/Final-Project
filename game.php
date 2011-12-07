@@ -67,7 +67,38 @@
             });
                      
       });
-     
+      // if the recycle image is clicked, validate
+      $("img.recycle").click(function() {
+            console.log("does this click work");
+            // we want to store the values of the clicked receptacle and the status of the bin  
+            var bin = $("img.recycle").attr('alt'); 
+            console.log($("this")); 
+            console.log(bin);
+            // send the status and receptacle data to game2.php    
+            $.get("game2.php",{status:status, bin:bin},function(result){
+                $("#Correctness").html(result);
+            console.log("did this work?")            
+            // load a new image to the page for them to evaluate     
+            random_image();
+            });
+                     
+      });
+     // if the recycle image is clicked, validate
+     $("img.ewaste").click(function() {
+            console.log("does this click work");
+            // we want to store the values of the clicked receptacle and the status of the bin  
+            var bin = $("img.ewaste").attr('alt'); 
+            console.log($("this")); 
+            console.log(bin);
+            // send the status and receptacle data to game2.php    
+            $.get("game2.php",{status:status, bin:bin},function(result){
+                $("#Correctness").html(result);
+            console.log("did this work?")            
+            // load a new image to the page for them to evaluate     
+            random_image();
+            });
+                     
+      }); 
  });  
   
        
