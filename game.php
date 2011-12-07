@@ -55,13 +55,12 @@
             $("img.trash").click(function() {
             console.log("does this click work");
             // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.trash").attr('alt'); 
-            console.log($("this")); 
+            var bin = $("img.trash").attr('alt');
             console.log(bin);
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
-            console.log("did this work?")            
+            console.log("did get function work?")            
             // load a new image to the page for them to evaluate     
             random_image();
             });
