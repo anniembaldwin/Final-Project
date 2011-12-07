@@ -13,6 +13,9 @@
 // require common code
    require("includes/common.php"); 
 
+// remember session id
+   $id = $_SESSION["id"];
+   
 // store the bin and status values
     $bin = $_GET["bin"];
     $status = $_GET["status"]; 
@@ -22,7 +25,7 @@ if ($bin == $status)
 {
      $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
      mysql_query($sql);
-     return "You're correct!!";
+     dump("You're correct!!");
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
@@ -30,7 +33,7 @@ if ($bin != $status)
 {
     $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
     mysql_query($sql);       
-    return "That's incorrect";
+    dump("That's incorrect");
 }      
 
 
