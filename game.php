@@ -34,8 +34,8 @@
         // load a random image to be sorted to the page
        function random_image ()
        { 
-           // get a random integer
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));
+           /* get a random integer
+           random_integer = Math.floor(Math.random()*(ITEMS.length +1));*/
            
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
@@ -97,7 +97,7 @@
                      $points = $row["points"];
                 ?>
                 <tr align = "center">
-                    <td id ="Correctness" style ="color:green"></td>
+                    <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
                     <td>
                     <img id="Random Item" alt="Item to Sort" src=""/>                      
