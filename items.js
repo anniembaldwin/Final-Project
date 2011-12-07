@@ -261,7 +261,7 @@ var ITEMS = [
  {
   name: "paperplate",
   caption: "paper plate",
-  status: "reycycle"
+  status: "trash"
  },
  {
   name: "papershoppingbag",
