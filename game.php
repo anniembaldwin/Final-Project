@@ -28,9 +28,6 @@
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
         
-       // return a random number between 0 and the length of the ITEMS array 
-          //random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
-        
        
        // load a random image to be sorted to the page
        function random_image ()
@@ -39,7 +36,7 @@
            random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
         
            // store the loaded item's status (recyclable, disposable, or electronic recyclable)
-            status = ITEMS[random_integer].status;
+           status = ITEMS[random_integer].status;
            
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
@@ -65,7 +62,8 @@
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
                 $("#Correctness").html(data);
-                        
+            
+            console.log(data);            
             // load a new image to the page for them to evaluate     
             random_image();
             });
