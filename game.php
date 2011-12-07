@@ -56,6 +56,7 @@
        // check whether the clicked bin is the correct one
        function validate(bin)
        {
+           alert(status);
            if(status == bin)
            {
                 $.get("game2.php?success=0")
