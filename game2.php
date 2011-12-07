@@ -64,7 +64,7 @@ if ($bin != $status)
     
     //print("That's incorrect"); 
      // return correctness and points
-    print("{correct: 'That's incorrect!', points: $points}");
+    print("that's incorrect'");
 }      
 
 
