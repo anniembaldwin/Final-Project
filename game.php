@@ -54,15 +54,15 @@
        
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
-            $("#trash").click(function() {
+            $("img.trash").click(function() {
             
             // remember what bin was clicked (trash)  
-            var bin = $("#trash").attr('alt');
+            var bin = $("img.trash").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
                 console.log("hallooo");
-                $("#Correctness").html(data.correct);
+                $("#Correctness").html(data);
                 //$("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
@@ -132,9 +132,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img class="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
