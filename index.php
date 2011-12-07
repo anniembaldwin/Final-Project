@@ -27,7 +27,29 @@
 
       The more questions you get right, the more participation points you win for Green Cup.
     </div>
+    <div>
+        <!--Big Board-->
+    <?
+       $bigboard = mysql_query("SELECT username, house, points FROM users ORDER BY points DESC");?>
+         <table>
+         <tbody>
+         <!--makes table headings-->
+            <tr>
+                    <th> Username </th>
+                    <th> House </th>
+                    <th> Points</th>
+            </tr>
+            
+        <? while ($row=mysql_fetch_array($bigboard)):?>
 
+            <tr>
+             <td><?= $row["username"] ?></td> <td><?= $row["house"] ?></td><td>$<?= $row["points"] ?></td>
+            </tr>
+
+        <? endwhile ?>
+           </tbody>
+          </table>
+    </div>
    <div style="text-align: center;">
       <a href="singlestream.html">Single Stream Recycling</a>
       |
