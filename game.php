@@ -53,7 +53,7 @@
        // after the pages is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
             $("img.receptacle").click(function() {
-            
+            console.log("does this click work");
             // we want to store the values of the receptacle and the status of the bin  
             var bin = $('#receptacle').attr('alt');  
             
