@@ -54,8 +54,8 @@
        
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
-            $("img.trash").click(function(event) {
-            console.log(event);
+            $("#trash").click(function(e) {
+            console.log(e);
             // remember what bin was clicked (trash)  
             var bin = $("img.trash").attr('alt');
             
@@ -131,9 +131,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img class="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>

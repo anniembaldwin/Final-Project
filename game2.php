@@ -40,7 +40,7 @@ if ($bin == $status)
      $points = $row["points"];
      
      // return correctness and points
-    "{"correct": 'You're correct!', "points": $points}"
+    print("{correct: 'You're correct!', points: $points}");
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
