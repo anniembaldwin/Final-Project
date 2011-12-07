@@ -29,7 +29,7 @@
        <script type = "text/javascript">
         
        // return a random number between 0 and the length of the ITEMS array 
-          random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
+          //random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
         
        
        // load a random image to be sorted to the page
@@ -38,6 +38,9 @@
            // return a new random number between 0 and the length of the ITEMS array 
            random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
         
+           // store the loaded item's status (recyclable, disposable, or electronic recyclable)
+            status = ITEMS[random_integer].status;
+           
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
@@ -51,25 +54,24 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        
-       // store the loaded item's status (recyclable, disposable, or electronic recyclable)
-       status = ITEMS[random_integer].status;
        
-       // after the page is loaded and one of the receptacles is clicked, run the validation
+       // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
             $("img.trash").click(function() {
-            console.log("does this click work");
-            // we want to store the values of the clicked receptacle and the status of the bin  
+            
+            // remember what bin was clicked (trash)  
             var bin = $("img.trash").attr('alt');
-            console.log(bin);
-            // send the status and receptacle data to game2.php    
-            $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
-            console.log("did get function work?")            
+            
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.get("game2.php",{status:status, bin:bin},function(data){
+                $("#Correctness").html(data);
+                        
             // load a new image to the page for them to evaluate     
             random_image();
             });
                      
       });
+      
       // if the recycle image is clicked, validate
       $("img.recycle").click(function() {
             console.log("does this click work");
