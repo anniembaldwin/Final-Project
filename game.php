@@ -61,13 +61,13 @@
            
            if(status == bin)
            {
-                $.get("game2.php?success=0");
+                $.get("game2.php?correctness=0");
                 document.getElementById("Correctness").innerHTML = "Correct";
                 
            }
            else if(status != bin)
            {
-               $.get("game2.php?success=1");
+               $.get("game2.php?correctness=1");
                 document.getElementById("Correctness").innerHTML = "Incorrect";
            }
            
