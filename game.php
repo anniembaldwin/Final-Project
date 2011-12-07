@@ -36,11 +36,11 @@
        function validate(bin){
        if(status == bin)
        {
-        $.get("game2.php?success=0", function(correctness))
+        $.get("game2.php?success=0")
        }
        else if(status != bin)
        {
-        $.get("game2.php?success=1", function(correctness))
+        $.get("game2.php?success=1")
        }
        
        // call validate function and assign points accordingly
@@ -86,7 +86,7 @@
      </script>
     </head>
         <body onload = "random_image()">
-            <img id="logo" src="Images/logo.jpg"/div>
+            <img id="logo" src="Images/logo.jpg"/>
             <h1>Play the Game! </h1>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
