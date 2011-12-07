@@ -46,6 +46,15 @@ div#top
     text-align: center;
 }
 
+/* center image in top div */
+IMG.displayed
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* eliminate margins around forms */
 form
 {

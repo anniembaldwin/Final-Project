@@ -18,7 +18,7 @@
 
 <html>
   <head>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <title>RecycleHarvard: Welcome!</title>
   </head>
   
