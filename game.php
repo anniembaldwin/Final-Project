@@ -17,12 +17,12 @@
    
 ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 
  
  <html>
     <head>
-        <title>RecycleHarvard:Welcome to the Game!</title>
+       <title>RecycleHarvard:Welcome to the Game!</title>
 
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
@@ -34,9 +34,6 @@
         // load a random image to be sorted to the page
        function random_image ()
        { 
-           // get a random integer
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));
-           
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
@@ -44,54 +41,40 @@
            var picture = "Images/" + name + ".jpg";
            
            // set the src attribute of the picture
-           document.getElementById("Random Item").setAttribute("src", picture);
+           document.getElementById("RandomItem").setAttribute("src", picture);
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
-     
+
        
+       // store the loaded item's status (recyclable, disposable, or electronic recyclable)
+       status = ITEMS[random_integer].status;
        
-       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
-       var status = ITEMS[random_integer].status;
-       function validate(bin){
-       if(status == bin)
-       {
-        //$.get("game2.php?success=0")
-        //document.getElementByID("Correctness").innerHTML = "Correct";
-        var correctness =$('correctness').attr('yes');
-            $.ajax({
-            type: "POST",
-            url: "ajax.php",
-            data: "correctness=" + correctness,
-            success: function(){
-            alert(yey)
-            }
+       // after the pages is loaded and one of the receptacles is clicked, run the validation
+       $(document).ready(function(){  
+            $("img.receptacle").click(function() {
+            console.log("does this click work");
+            // we want to store the values of the clicked receptacle and the status of the bin  
+            var bin = $("img.receptacle").attr('alt'); 
+            console.log($("this")); 
+            console.log(bin);
+            // send the status and receptacle data to game2.php    
+            $.get("game2.php",{status:status, bin:bin},function(result){
+                $("#Correctness").html(result);
+            console.log("did this work?")
             
-            })
-       }
-       else if(status != bin)
-       {
-        //$.get("game2.php?success=1");
-        //document.getElementByID("Correctness").innerHTML = "Incorrect";
-         var correctness =$('correctness').attr('no');
-            $.ajax({
-            type: "POST",
-            url: "ajax.php",
-            data: "correctness=" + correctness,
-            success: function(){
-            alert(yey)
-            }
-       }
+            // load a new image to the page for them to evaluate     
+            random_image();
+            });
+         
+            
+      });
+     
+ });  
+  
        
-       // load a new image to the page for them to evaluate     
-       random_image();
-       }
-       
-       
-       
-       
-      
+
      </script>
     </head>
         <body onload = "random_image()">
@@ -117,10 +100,10 @@
                      $points = $row["points"];
                 ?>
                 <tr align = "center">
-                    <td id ="Correctness" style ="color:green"></td>
+                    <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
                     <td>
-                    <img id="Random Item" alt="Item to Sort" src=""/>                      
+                    <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
                     </td>
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
@@ -131,10 +114,10 @@
              </table>               
              <div id = "bottom">
                 <table>
-                    <tr>
-                        <td><a style ="postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin" src="Images/ewaste.jpg" onclick = "return validate('e-waste');"></a><td>
+                    <tr> 
+                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img class="receptacle" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>

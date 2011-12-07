@@ -1,33 +1,51 @@
+<?
+/****************************************************************************
+ *                               index.php
+ *
+ *                          Computer Science 50
+ *                              Problem Set 7
+ *                      Anne Baldwin and Natalie Jacewicz
+ *
+ *          Support the interface for a user to play a game.           
+ ***************************************************************************/
+
+   require("includes/common.php");
+?>
+
+
 <!DOCTYPE html>
 
 
 <html>
-    
   <head>
-    <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-    <title>RecycleHarvard: Login</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        <!--
+
+            td, th
+            {
+                border: 3px #000000 solid;
+                border-style: outset;
+            }
+
+        -->
+        </style>
+    <title>RecycleHarvard: Welcome!</title>
   </head>
   
   <div id = "top">
-    <a href >
+     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.jpg" width="544"></a>
   </div>
     
   <body style="color: green">
-
     <div style="color: teal">
-
-      Welcome to Recycle Harvard!
-
-     <br>
-
-     Take our quiz, and soon you'll be a pro at recycling!
-    </div>
-
-   <div>
-
-      The more questions you get right, the more participation points you win for Green Cup.
-    </div>
-    <div>
+         Welcome to Recycle Harvard!
+         <br>
+         Take our quiz, and soon you'll be a pro at recycling!
+         <br>
+         The more questions you get right, the more participation points you win for Green Cup.
+   </div>
+    
         <!--Big Board-->
     <?
        $bigboard = mysql_query("SELECT username, house, points FROM users ORDER BY points DESC");?>
@@ -43,7 +61,7 @@
         <? while ($row=mysql_fetch_array($bigboard)):?>
 
             <tr>
-             <td><?= $row["username"] ?></td> <td><?= $row["house"] ?></td><td>$<?= $row["points"] ?></td>
+             <td><?= $row["username"] ?></td> <td><?= $row["house"] ?></td><td><?= $row["points"] ?></td>
             </tr>
 
         <? endwhile ?>
