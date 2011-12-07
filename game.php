@@ -57,13 +57,31 @@
        function validate(bin){
        if(status == bin)
        {
-        $.get("game2.php?success=0")
-        document.getElementByID("Correctness").innerHTML = "Correct";
+        //$.get("game2.php?success=0")
+        //document.getElementByID("Correctness").innerHTML = "Correct";
+        var correctness =$('correctness').attr('yes');
+            $.ajax({
+            type: "POST",
+            url: "ajax.php",
+            data: "correctness=" + correctness,
+            success: function(){
+            alert(yey)
+            }
+            
+            })
        }
        else if(status != bin)
        {
-        $.get("game2.php?success=1");
-            document.getElementByID("Correctness").innerHTML = "Incorrect";
+        //$.get("game2.php?success=1");
+        //document.getElementByID("Correctness").innerHTML = "Incorrect";
+         var correctness =$('correctness').attr('no');
+            $.ajax({
+            type: "POST",
+            url: "ajax.php",
+            data: "correctness=" + correctness,
+            success: function(){
+            alert(yey)
+            }
        }
        
        // load a new image to the page for them to evaluate     
