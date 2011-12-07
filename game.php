@@ -61,6 +61,7 @@
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
+            console.log("did this work?")
             // load a new image to the page for them to evaluate     
             random_image();
             });
