@@ -41,7 +41,7 @@
            var picture = "Images/" + name + ".jpg";
            
            // set the src attribute of the picture
-           document.getElementById("Random Item").setAttribute("src", picture);
+           document.getElementById("RandomItem").setAttribute("src", picture);
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
@@ -52,7 +52,11 @@
        
        // on the clicking of any of the receptacles, run the validation
        $(document).ready(function(){  
-            $("#receptacle").click(function() {  
+            $("#receptacle").click(function() {
+                
+                // make sure the page doesn't reload upon clicking of the image
+                event.preventDefault()  
+                
                 // we want to store the values of the receptacle and the status of the bin  
                 var bin = $('#receptacle').attr('alt');  
                 
@@ -60,7 +64,7 @@
                 $.ajax({  
                 type: "GET",  
                 url: "game2.php",  
-                data: "bin="+ bin +"& status="+ status,  
+                data: {bin: bin, status: status},  
                 success: function(){  
                 $('#Correctness').attr('innerHTML', 'you awesome');  
                 }  
@@ -101,7 +105,7 @@
                     <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
                     <td>
-                    <img id="Random Item" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
+                    <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
                     </td>
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
@@ -112,9 +116,9 @@
              </table>               
              <div id = "bottom">
                 <table>
-                    <tr>
-                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" alt="trash" src="Images/trashcan.jpg"></a></td> 
+                    <tr> 
                         <td><a style="position:relative:left:200px" href="game.php"><img id= "receptacle" alt="recycle" src="Images/recyclingbin.jpg"></a></td>
+                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" alt="trash" src="Images/trashcan.jpg"></a></td>
                         <td><a style="position:relative:left:200px" href="game.php"><img id="receptacle" alt="e-waste" src="Images/ewaste.jpg"></a></td>
                     </tr>
                     <tr>
