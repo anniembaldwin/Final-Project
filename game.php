@@ -59,13 +59,13 @@
            alert(status);
            if(status == bin)
            {
-                //$.get("game2.php?success=0")
+                $.get("game2.php?success=0");
                 document.getElementByID("Correctness").innerHTML = "Correct";
-                alert(omg wow worked);
+                
            }
            else if(status != bin)
            {
-               // $.get("game2.php?success=1");
+               $.get("game2.php?success=1");
                 document.getElementByID("Correctness").innerHTML = "Incorrect";
            }
            
