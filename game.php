@@ -63,7 +63,7 @@
                 $("#Correctness").html(result);
             console.log("did this work?")
             // load a new image to the page for them to evaluate     
-            random_image();
+            dump($_GET);
             });
          
             
