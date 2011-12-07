@@ -49,6 +49,24 @@
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
+       
+           // points
+            <?php
+                     // remember the user's id from session id
+                     $id = $_SESSION["id"];
+                     
+                     // prepare sql
+                     $sql = "SELECT points FROM users WHERE id = $id";
+                     
+                     // execute query on remembering the users' points
+                     $result = mysql_query($sql);  
+                     
+                     // access the data row
+                     $row = mysql_fetch_array($result); 
+                     
+                     // access points
+                     $points = $row["points"];
+            ?>
        }
        
        
@@ -113,22 +131,6 @@
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
-                <?
-                     // remember the user's id from session id
-                     $id = $_SESSION["id"];
-                     
-                     // prepare sql
-                     $sql = "SELECT points FROM users WHERE id = $id";
-                     
-                     // execute query on remembering the users' points
-                     $result = mysql_query($sql);  
-                     
-                     // access the data row
-                     $row = mysql_fetch_array($result); 
-                     
-                     // access points
-                     $points = $row["points"];
-                ?>
                 <tr align = "center">
                     <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
