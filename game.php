@@ -50,8 +50,29 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        
+<<<<<<< HEAD
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
+=======
+       
+       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
+       var status = ITEMS[random_integer].status;
+       function validate(bin){
+       if(status == bin)
+       {
+        $.get("game2.php?success=0", {""})
+        document.getElementByID("Correctness").innerHTML = "Correct";
+       }
+       else if(status != bin)
+       {
+        $.get("game2.php?success=1");
+            document.getElementByID("Correctness").innerHTML = "Incorrect";
+       }
+       
+       // load a new image to the page for them to evaluate     
+       random_image();
+       }
+>>>>>>> 9f5581dafac05e93e06e2458a6b88f54f6f44d8d
        
        
        // check whether the clicked bin is the correct one
@@ -75,6 +96,11 @@
            random_image();
        };
        
+<<<<<<< HEAD
+=======
+       
+      
+>>>>>>> 9f5581dafac05e93e06e2458a6b88f54f6f44d8d
      </script>
     </head>
         <body onload = "random_image()">
