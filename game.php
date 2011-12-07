@@ -53,11 +53,10 @@
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        var status = ITEMS[random_integer].status;
        
-       
        // check whether the clicked bin is the correct one
        function validate(bin)
        {
-           alert(status);
+           alert(bin);
            if(status == bin)
            {
                 $.get("game2.php?success=0")

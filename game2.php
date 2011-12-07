@@ -9,8 +9,9 @@
  *          Support the interface for a user to play a game.           
  ***************************************************************************/
 
+// require common code
    require("includes/common.php"); 
-       {   
+{   
            
            // if the clicked bin is the correct bin, tell the user so and update their points
            if (correctness == 0)
