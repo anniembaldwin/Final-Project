@@ -34,9 +34,6 @@
         // load a random image to be sorted to the page
        function random_image ()
        { 
-           /* get a random integer
-           random_integer = Math.floor(Math.random()*(ITEMS.length +1));*/
-           
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
@@ -50,57 +47,32 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
        
-<<<<<<< HEAD
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
-=======
        
-       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
-       var status = ITEMS[random_integer].status;
-       function validate(bin){
-       if(status == bin)
-       {
-        $.get("game2.php?success=0", {""})
-        document.getElementByID("Correctness").innerHTML = "Correct";
-       }
-       else if(status != bin)
-       {
-        $.get("game2.php?success=1");
-            document.getElementByID("Correctness").innerHTML = "Incorrect";
-       }
-       
-       // load a new image to the page for them to evaluate     
-       random_image();
-       }
->>>>>>> 9f5581dafac05e93e06e2458a6b88f54f6f44d8d
-       
-       
-       // check whether the clicked bin is the correct one
-       function validate(bin)
-       {
-           alert(status);
-           
-           if(status == bin)
-           {
-                $.get("game2.php", {correctness:"yes"});
-                document.getElementById("Correctness").innerHTML = "Correct";
+       // on the clicking of any of the receptacles, run the validation
+       $(document).ready(function(){  
+            $("#receptacle").click(function() {  
+                // we want to store the values of the receptacle and the status of the bin  
+                var bin = $('#receptacle').attr('alt');  
                 
-           }
-           else if(status != bin)
-           {
-               $.get("game2.php?correctness=1");
-                document.getElementById("Correctness").innerHTML = "Incorrect";
-           }
-           
-           // load a new image to the page for them to evaluate     
-           random_image();
-       };
-       
-<<<<<<< HEAD
-=======
-       
-      
->>>>>>> 9f5581dafac05e93e06e2458a6b88f54f6f44d8d
+                // send the status and receptacle data to game2.php
+                $.ajax({  
+                type: "GET",  
+                url: "game2.php",  
+                data: "bin="+ bin +"& status="+ status,  
+                success: function(){  
+                $('#Correctness').attr('innerHTML', 'you awesome');  
+                }  
+            });  
+            
+            // always return false
+            return false;  
+    });  
+ });  
+        // load a new image to the page for them to evaluate     
+        random_image();
+
      </script>
     </head>
         <body onload = "random_image()">
@@ -141,9 +113,9 @@
              <div id = "bottom">
                 <table>
                     <tr>
-                        <td><a style ="postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin" src="Images/ewaste.jpg" onclick = "return validate('e-waste');"></a><td>
+                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" "alt="trash" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
+                        <td><a style="position:relative:left:200px" href="game.php"><img id= "receptacle" alt="recycle" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img id="receptacle" alt="e-waste" src="Images/ewaste.jpg" onclick = "return validate('e-waste');"></a><td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
