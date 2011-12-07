@@ -10,13 +10,10 @@
  ***************************************************************************/
 <? 
    require("common.php"); 
-      function validate(bin)
        {   
-           // get the loaded item's status (recyclable, disposable, or electronic recyclable)
-           var status = ITEMS[random_integer].status;
            
            // if the clicked bin is the correct bin, tell the user so and update their points
-           if (status == bin)
+           if (correctness == 0)
            {
                     $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
                     mysql_query($sql);
@@ -24,7 +21,7 @@
            }
            
            // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
-           if (status !=bin)
+           if (correctness == 1)
            {
                $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
                mysql_query($sql);

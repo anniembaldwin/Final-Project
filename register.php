@@ -20,11 +20,11 @@
 
   <head>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>RecycleHarvard: Register!</title>
+        <title>RecycleHarvard: Register!</title>
   </head>
 
   <body>
-
+    <img id="logo" src="Images/logo.jpg"/>
     <div id="top">
       <a href="index.php"><img alt="C$50 Finance" src="images/logo.gif"></a>
     </div>

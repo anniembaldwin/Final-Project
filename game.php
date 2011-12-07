@@ -6,7 +6,7 @@
  *                              Final Project
  *                     Anne Baldwin and Natalie Jacewicz
  *
- *                   Allows a user to play the recycling game.
+ *                 Allows a user to play the recycling game.
  ***************************************************************************/
 
 // require common code
@@ -22,13 +22,26 @@
  
  <html>
     <head>
-       <title>RecycleHarvard:Welcome to the Game!</title>
+        <title>RecycleHarvard:Welcome to the Game!</title>
+
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
        
        // return a random number between 0 and the length of the ITEMS array 
        random_integer = Math.floor(Math.random()*(ITEMS.length +1));
+       
+       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
+       var status = ITEMS[random_integer].status;
+       function validate(bin){
+       if(status == bin)
+       {
+        $.get("game2.php?success=0", function(correctness))
+       }
+       else if(status != bin)
+       {
+        $.get("game2.php?success=1", function(correctness))
+       }
        
        // call validate function and assign points accordingly
        $(document).ready(function(){
@@ -73,6 +86,7 @@
      </script>
     </head>
         <body onload = "random_image()">
+            <img id="logo" src="Images/logo.jpg"/div>
             <h1>Play the Game! </h1>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
@@ -111,7 +125,7 @@
                     <tr>
                         <td><a style ="postition:relative;left:200px" href="game.php"><img alt="Trash Can" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
                         <td><a style="position:relative:left:200px" href="game.php"><img alt="Recycling Bin" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin" src="Images/electronicrecycling.jpg" onclick = "return validate('e-waste');"></a><td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img alt="Electronic Recycling Bin" src="Images/ewaste.jpg" onclick = "return validate('e-waste');"></a><td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>

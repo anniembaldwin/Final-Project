@@ -18,11 +18,11 @@
 <html>
 
   <head>
-    <title>RecycleHarvard: Log In</title>
+        <title>RecycleHarvard: Log In</title>
   </head>
 
   <body>
-
+    <img id="logo" src="Images/logo.jpg"/>
     <div id="top">
        Log in!
       <a href="index.php"><img alt="Recycle-Harvard" src="Images/beerbottle.gif"></a>
