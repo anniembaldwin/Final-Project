@@ -58,7 +58,7 @@
             var bin = $('#receptacle').attr('alt');  
             
             // send the status and receptacle data to game2.php    
-            $.post("game2.php",{status:status, bin:bin},function(result){
+            $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
             });
       });
