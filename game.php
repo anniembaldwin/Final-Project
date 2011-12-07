@@ -57,6 +57,7 @@
        function validate(bin)
        {
            alert(status);
+           document.getElementByID("Correctness").innerHTML = "Correct";
            if(status == bin)
            {
                 $.get("game2.php?success=0");
