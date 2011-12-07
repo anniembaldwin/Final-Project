@@ -113,9 +113,9 @@
              <div id = "bottom">
                 <table>
                     <tr>
-                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" "alt="trash" src="Images/trashcan.jpg" onclick = "return validate('trash');"></a></td> 
-                        <td><a style="position:relative:left:200px" href="game.php"><img id= "receptacle" alt="recycle" src="Images/recyclingbin.jpg" onclick = "return validate('recycle');"></a></td>
-                        <td><a style="position:relative:left:200px" href="game.php"><img id="receptacle" alt="e-waste" src="Images/ewaste.jpg" onclick = "return validate('e-waste');"></a><td>
+                        <td><a style ="postition:relative;left:200px" href="game.php"><img id="receptacle" "alt="trash" src="Images/trashcan.jpg;"></a></td> 
+                        <td><a style="position:relative:left:200px" href="game.php"><img id= "receptacle" alt="recycle" src="Images/recyclingbin.jpg;"></a></td>
+                        <td><a style="position:relative:left:200px" href="game.php"><img id="receptacle" alt="e-waste" src="Images/ewaste.jpg;"></a><td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
