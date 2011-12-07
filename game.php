@@ -49,23 +49,6 @@
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
-       
-           // reload the person's points
-            <?php
-                     // remember the user's id from session id
-                     $id = $_SESSION["id"];
-                     
-                     // prepare sql
-                     $sql = "SELECT points FROM users WHERE id = $id";
-                     
-                     // execute query on remembering the users' points
-                     $result = mysql_query($sql);  
-                     
-                     // access the data row
-                     $row = mysql_fetch_array($result); 
-                     
-                     // access points
-                     $points = $row["points"]; ?>
        }
        
        
@@ -78,11 +61,12 @@
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
-                $("#Correctness").html(data), "text";
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            });
+            },"json");
                      
       });
       
@@ -141,7 +125,7 @@
                 <tr id= "Caption" style="text-align:center"></tr>
                 <tr></tr>
                 <tr id ="Points" style="text-align:center">
-                    <td>You have <?= $points ?> points</td>
+                    <td></td>
                  </tr>    
              </table>               
              <div id = "bottom">
