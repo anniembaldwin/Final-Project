@@ -57,7 +57,7 @@
             $("#trash").click(function() {
             
             // remember what bin was clicked (trash)  
-            var bin = $("img.trash").attr('alt');
+            var bin = $("#trash").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
