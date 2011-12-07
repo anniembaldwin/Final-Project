@@ -55,7 +55,7 @@
             $("img.receptacle").click(function() {
             console.log("does this click work");
             // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("this").attr('alt'); 
+            var bin = $("img.receptacle").attr('alt'); 
             console.log(this); 
             console.log(bin);
             // send the status and receptacle data to game2.php    
@@ -112,9 +112,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img class="e-waste" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img class="receptacle" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img class="receptacle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img class="receptacle" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
