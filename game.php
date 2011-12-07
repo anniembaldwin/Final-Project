@@ -37,28 +37,16 @@
        if(status == bin)
        {
         $.get("game2.php?success=0")
+        document.getElementByID("Correctness").innerHTML = "Correct";
        }
        else if(status != bin)
        {
-        $.get("game2.php?success=1")
+        $.get("game2.php?success=1";
+            document.getElementByID("Correctness").innerHTML = "Incorrect";
        }
        
-       // call validate function and assign points accordingly
-       $(document).ready(function(){
-        $("img").click(function(){
-            $.get("game2.php", function(correctness){
-            
-                if(correctness == 0)
-                {
-                    document.getElementByID("Correctness").innerHTML = "Correct";
-                }
-                else if(correctness == 1)
-                {
-                    document.getElementById("Correctness").innerHTML = "Incorrect";
-                }
-                });
-                // load a new image to the page for them to evaluate     
-                random_image();
+       // load a new image to the page for them to evaluate     
+       random_image();
          });
        }
        
