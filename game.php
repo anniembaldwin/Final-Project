@@ -50,30 +50,22 @@
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
        
-       // on the clicking of any of the receptacles, run the validation
+       // after the pages is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
             $("#receptacle").click(function() {
-                
-                // make sure the page doesn't reload upon clicking of the image
-                //event.preventDefault()  
-                
-                // we want to store the values of the receptacle and the status of the bin  
-                var bin = $('#receptacle').attr('alt');  
-                
-                // send the status and receptacle data to game2.php
-                $.ajax({  
-                type: "GET",  
-                url: "game2.php",  
-                data: {bin: bin, status: status},  
-                success: function(){  
-                $("#Correctness").html("maybe this works");  
-                }  
-            });  
             
-            // always return false
-            return false;  
-    });  
+            // we want to store the values of the receptacle and the status of the bin  
+            var bin = $('#receptacle').attr('alt');  
+            
+            // send the status and receptacle data to game2.php    
+            $.post("game2.php",{status:status, bin:bin},function(result){
+                $("#Correctness").html(result);
+            });
+      });
+      // always return false
+      return false;  
  });  
+  
         // load a new image to the page for them to evaluate     
         random_image();
 
