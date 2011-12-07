@@ -17,12 +17,12 @@
    
 ?>
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 
  
  <html>
     <head>
-        <title>RecycleHarvard:Welcome to the Game!</title>
+       <title>RecycleHarvard:Welcome to the Game!</title>
 
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
@@ -49,31 +49,28 @@
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
-     
        
-       
-       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
+       // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        var status = ITEMS[random_integer].status;
-       function validate(bin){
-       if(status == bin)
+       
+       // check whether the clicked bin is the correct one
+       function validate(bin)
        {
-        $.get("game2.php?success=0")
-        document.getElementByID("Correctness").innerHTML = "Correct";
-       }
-       else if(status != bin)
-       {
-        $.get("game2.php?success=1");
-            document.getElementByID("Correctness").innerHTML = "Incorrect";
-       }
+           if(status == bin)
+           {
+                $.get("game2.php?success=0")
+                document.getElementByID("Correctness").innerHTML = "Correct";
+           }
+           else if(status != bin)
+           {
+                $.get("game2.php?success=1");
+                document.getElementByID("Correctness").innerHTML = "Incorrect";
+           }
+           
+           // load a new image to the page for them to evaluate     
+           random_image();
+       };
        
-       // load a new image to the page for them to evaluate     
-       random_image();
-         };
-       
-       
-       
-       
-      
      </script>
     </head>
         <body onload = "random_image()">
