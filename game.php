@@ -52,10 +52,11 @@
        
        // after the pages is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
-            $("img.trash").click(function() {
+            $("img.receptacle").click(function() {
             console.log("does this click work");
             // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.trash").attr('alt');  
+            var bin = $"this.attr('alt')"; 
+            console.log(this); 
             console.log(bin);
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
