@@ -61,7 +61,8 @@ if ($bin != $status)
     // access points
     $points = $row["points"];
     
-    print("That's incorrect");
+     // return correctness and points
+    print("{correct: 'That's incorrect!', points: $points}");
 }      
 
 
