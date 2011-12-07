@@ -52,7 +52,7 @@
        
        // after the pages is loaded and one of the receptacles is clicked, run the validation
        $(document).ready(function(){  
-            $("#receptacle").click(function() {
+            ///$("#receptacle").click(function() {
             
             // we want to store the values of the receptacle and the status of the bin  
             var bin = $('#receptacle').attr('alt');  
@@ -61,7 +61,7 @@
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html("result");
             });
-      });
+      //});
      
  });  
   
