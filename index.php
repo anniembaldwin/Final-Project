@@ -9,7 +9,7 @@
  *          Support the interface for a user to play a game.           
  ***************************************************************************/
 
-   require("common.php");
+   require("includes/common.php");
 ?>
 
 
