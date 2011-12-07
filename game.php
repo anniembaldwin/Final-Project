@@ -61,8 +61,7 @@
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
-                console.log(data.correct);
-                console.log(data.points);
+               
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
