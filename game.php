@@ -66,7 +66,7 @@
                 url: "game2.php",  
                 data: {bin: bin, status: status},  
                 success: function(){  
-                $('#Correctness').attr('innerHTML', 'you awesome');  
+                $("#Correctness").html("maybe this works");  
                 }  
             });  
             
