@@ -101,7 +101,7 @@
                     <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
                     <td>
-                    <img id="Random Item" alt="Item to Sort" src=""/>                      
+                    <img id="Random Item" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
                     </td>
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
