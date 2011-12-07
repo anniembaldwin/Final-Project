@@ -48,13 +48,15 @@
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
+           
+           // test
+       document.getElementByID("Correctness").innerHTML = "Correct";
        }
        
        // store the loaded item's status (recyclable, disposable, or electronic recyclable)
        status = ITEMS[random_integer].status;
        
-       // test
-       document.getElementByID("Correctness").innerHTML = "Correct";
+       
        
        // check whether the clicked bin is the correct one
        function validate(bin)
