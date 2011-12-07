@@ -63,7 +63,7 @@
             $.get("game2.php",{status:status, bin:bin},function(data){
                 $("#Correctness").html(data);
             
-            console.log(data);            
+            //console.log(data);            
             // load a new image to the page for them to evaluate     
             random_image();
             });

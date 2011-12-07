@@ -34,5 +34,5 @@ if ($bin != $status)
     return "That's incorrect'";
 }      
 
-return "wazzuuuup";
+
 ?>
