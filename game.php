@@ -57,7 +57,7 @@
        function validate(bin){
        if(status == bin)
        {
-        $.get("game2.php?success=0")
+        $.get("game2.php?success=0", {""})
         document.getElementByID("Correctness").innerHTML = "Correct";
        }
        else if(status != bin)
@@ -68,8 +68,8 @@
        
        // load a new image to the page for them to evaluate     
        random_image();
-         });
        }
+       
        
        
        
