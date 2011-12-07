@@ -24,7 +24,7 @@
   </head>
   
   <div id = "top">
-    <a href >
+     <a href="index.php"><img alt="RecycleHarvadr" height="110" src="images/logo.jpg" width="544"></a>
   </div>
     
   <body style="color: green">
