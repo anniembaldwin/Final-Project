@@ -18,9 +18,10 @@ a img
 /* defaults for body */
 body
 {
-    background: #00FFFF;
+    background: #228B22;
     color: #27408B;
     font-family: sans-serif;
+    text-align: center;
     margin: 0;
 }
 
@@ -40,6 +41,8 @@ div#middle
 /* center text in top div */
 div#top
 {
+    width:500px;
+    margin:0px auto;
     text-align: center;
 }
 

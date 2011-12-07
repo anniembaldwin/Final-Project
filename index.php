@@ -1,6 +1,6 @@
 <?
 /****************************************************************************
- *                               game2.php
+ *                               index.php
  *
  *                          Computer Science 50
  *                              Problem Set 7
@@ -17,7 +17,6 @@
 
 
 <html>
-    
   <head>
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
     <title>RecycleHarvard: Welcome!</title>
