@@ -62,7 +62,7 @@
                 $("#Correctness").html(result);
             });
       });
-      
+    $("#Correctness").html("hello");  
  });  
   
         // load a new image to the page for them to evaluate     
