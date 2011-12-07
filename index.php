@@ -20,29 +20,22 @@
     
   <head>
     <link href="/css/styles.css" rel="stylesheet" type="text/css" />
-    <title>RecycleHarvard: Login</title>
+    <title>RecycleHarvard: Welcome!</title>
   </head>
   
   <div id = "top">
-     <a href="index.php"><img alt="RecycleHarvard" height="110" src="Images/logo.jpg" width="544"></a>
+     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.jpg" width="544"></a>
   </div>
     
   <body style="color: green">
-
     <div style="color: teal">
-
-      Welcome to Recycle Harvard!
-
-     <br>
-
-     Take our quiz, and soon you'll be a pro at recycling!
-    </div>
-
-   <div>
-
-      The more questions you get right, the more participation points you win for Green Cup.
-    </div>
-    <div>
+         Welcome to Recycle Harvard!
+         <br>
+         Take our quiz, and soon you'll be a pro at recycling!
+         <br>
+         The more questions you get right, the more participation points you win for Green Cup.
+   </div>
+    
         <!--Big Board-->
     <?
        $bigboard = mysql_query("SELECT username, house, points FROM users ORDER BY points DESC");?>
