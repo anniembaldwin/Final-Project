@@ -27,32 +27,11 @@
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
-       
+
        // return a random number between 0 and the length of the ITEMS array 
-       random_integer = Math.floor(Math.random()*(ITEMS.length +1));
-       
-       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
-       var status = ITEMS[random_integer].status;
-       function validate(bin){
-       if(status == bin)
-       {
-        $.get("game2.php?success=0")
-        document.getElementByID("Correctness").innerHTML = "Correct";
-       }
-       else if(status != bin)
-       {
-        $.get("game2.php?success=1";
-            document.getElementByID("Correctness").innerHTML = "Incorrect";
-       }
-       
-       // load a new image to the page for them to evaluate     
-       random_image();
-         });
-       }
-       
-       
-       
-       // load a random image to be sorted to the page
+       random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
+        
+        // load a random image to be sorted to the page
        function random_image ()
        { 
            // get a random integer
@@ -71,6 +50,30 @@
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
      
+       
+       
+       // get the loaded item's status (recyclable, disposable, or electronic recyclable)
+       var status = ITEMS[random_integer].status;
+       function validate(bin){
+       if(status == bin)
+       {
+        $.get("game2.php?success=0")
+        document.getElementByID("Correctness").innerHTML = "Correct";
+       }
+       else if(status != bin)
+       {
+        $.get("game2.php?success=1");
+            document.getElementByID("Correctness").innerHTML = "Incorrect";
+       }
+       
+       // load a new image to the page for them to evaluate     
+       random_image();
+         });
+       }
+       
+       
+       
+      
      </script>
     </head>
         <body onload = "random_image()">
