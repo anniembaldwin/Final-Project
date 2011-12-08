@@ -65,10 +65,11 @@ if ($bin != $status)
     // access points
     $points = $row["points"];
    
-     // return correctness and points
-    //print("that's incorrect");
-     // return correctness and points
-    print("{correct: 'That is incorrect', points: $points}");
+    // define array
+     $arr = array('correct' => 'you are correct', 'points' => $points);
+     
+    // echo that array
+    echo json_encode($arr);
 
 }      
 
