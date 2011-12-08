@@ -43,7 +43,9 @@ if ($bin == $status)
      $arr = array('correct' => 'you are correct', 'points' => $points);
      
      // echo that array
-     echo json_encode($arr);
+     //echo json_encode($arr);
+     
+     echo(mysql_error());
 
 }
            
@@ -69,8 +71,9 @@ if ($bin != $status)
     $arr = array('correct' => 'you are incorrect', 'points' => $points);
      
     // echo that array
-    echo json_encode($arr);
+    //echo json_encode($arr);
 
+    echo(mysql_error());
 }      
 
 ?>
