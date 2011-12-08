@@ -29,7 +29,7 @@
     
     // if user hasn't already registered, send to register.php
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
-    $result = mysql_query("SELECT * FROM users WHERE id = $id");
+    $result = mysql_query("SELECT * FROM users WHERE email = $email");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
     else
