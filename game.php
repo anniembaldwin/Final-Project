@@ -80,31 +80,44 @@
       // if the recycle image is clicked, validate
       $("#recycle").click(function() {
             
-            // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.recycle").attr('alt'); 
-            console.log($("this")); 
+            // remember what bin was clicked (trash)  
+            var bin = $("#recycle").attr('alt');
             
-            // send the status and receptacle data to game2.php    
-            $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
-                       
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            dataType: "json",
+            success: function(data){
+                console.log("halloooo");
+                
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
+                      
             // load a new image to the page for them to evaluate     
-            random_image();
-            });
+            random_image();  
+            },
+             
+          });
                      
       });
      
      // if the ewaste image is clicked, validate
      $("#ewaste").click(function() {
             
-            // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.ewaste").attr('alt'); 
-            console.log($("this")); 
+              
+            // remember what bin was clicked (trash)  
+            var bin = $("#recycle").attr('alt');
             
-            // send the status and receptacle data to game2.php    
-            $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
-                     
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            dataType: "json",
+            success: function(data){
+                console.log("halloooo");
+                
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
+                      
             // load a new image to the page for them to evaluate     
             random_image();
             });
