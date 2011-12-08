@@ -62,8 +62,8 @@
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
                 //console.log(data);
-                $("#Correctness").html(data);
-                //$("#points").html(data.points);
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
             random_image();
@@ -125,8 +125,8 @@
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
                 <tr></tr>
-                <tr id ="Points" style="text-align:center">
-                    <td></td>
+                <tr style="text-align:center">
+                    <td id ="points"></td>
                  </tr>    
              </table>               
              <div id = "bottom">
