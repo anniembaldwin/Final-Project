@@ -4,7 +4,7 @@
  *
  *                          Computer Science 50
  *                              Final Project
- *                              Anne Baldwin
+ *                     Anne Baldwin and Natalie Jacewicz
  *
  *                   Supports interface to register a user.
  ***************************************************************************/
@@ -23,7 +23,6 @@
     
     // execute insertion
     $result = mysql_query($sql);
-
             
     // find out which id was assigned to that user
     $id = mysql_insert_id();

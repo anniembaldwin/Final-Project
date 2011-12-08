@@ -4,7 +4,7 @@
  *
  *                          Computer Science 50
  *                              Final Project
- *                              Anne Baldwin
+ *                      Anne Baldwin and Natalie Jacewicz
  *
  *                            Registers a user.
  ***************************************************************************/

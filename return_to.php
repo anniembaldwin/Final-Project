@@ -24,9 +24,12 @@
     $host  = $_SERVER["HTTP_HOST"];
     $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
     
+    // cache the user's session
+    $_SESSION["id"] = $id;
+    
     // if user hasn't already registered, send to register.php
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
-    $result = mysql_query("SELECT * FROM users WHERE email = '$email'");
+    $result = mysql_query("SELECT * FROM users WHERE id = $id");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
     else

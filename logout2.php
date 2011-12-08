@@ -18,9 +18,9 @@
     // log out current user, forgetting their session id
     logout();
  
-    // if user is already logged in, log out
+    /* if user is already logged in, log out
     if (isset($_SESSION["user"]))
-        unset($_SESSION["user"]);
+        unset($_SESSION["user"]);*/
  
  
     // redirect user to index.php
