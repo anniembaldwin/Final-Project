@@ -9,7 +9,7 @@
  *                      Receives return from CS50 Login
  ***************************************************************************/ 
     // configuration
-    require_once(dirname(__FILE__) . "/config.php");
+    require_once(dirname(__FILE__) . "/includes/config.php");
  
     // remember which user, if any, logged in
     $user = CS50::getUser(RETURN_TO);
