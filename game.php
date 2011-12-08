@@ -23,7 +23,7 @@
  <html>
     <head>
        <title>RecycleHarvard:Welcome to the Game!</title>
-
+       <link href="css/styles.css" rel="stylesheet" type="text/css" />
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
@@ -59,11 +59,12 @@
             // remember what bin was clicked (trash)  
             var bin = $("#trash").attr('alt');
             
-            // send the status and receptacle data to game2.php for validation and points update    
+            // make the ajax call to server    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){ 
+                // upon success, tell the user whether they got the right answer and the total number of points they have
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
@@ -75,7 +76,7 @@
       // if the recycle image is clicked, validate
       $("#recycle").click(function() {
             
-            // remember what bin was clicked (trash)  
+            // remember what bin was clicked (recycling)  
             var bin = $("#recycle").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
@@ -106,7 +107,7 @@
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-                console.log("halloooo");
+                
                 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
@@ -115,15 +116,16 @@
             random_image();
             }});
 
-    });  
+     });  
   
 });       
 
-     </script>
-    </head>
-        <body onload = "random_image()">
-            <img id="logo" src="Images/logo.jpg"/>
-            <h1>Play the Game! </h1>
+</script>
+</head>
+    <body onload = "random_image()">
+     <div id = "top">
+     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.jpg" width="544"></a>
+     </div>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
@@ -157,7 +159,7 @@
                       |
                       <a href="erecycle.html">Electronic Recycling</a>
                       |
-                      <a href="whyrecycle.html">Why Recycle?</a>
+                      <a href="index.php">Home</a>
                       |
                       <a href="game.php">Play the game!</a>
                       |
