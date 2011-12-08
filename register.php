@@ -33,6 +33,10 @@
       <form action="register2.php" method="post">
         <table>
           <tr>
+            <td>Name:</td>
+            <td><input name="name" type="text"></td>
+          </tr>
+          <tr>
             <td>House</td>
             <td>
                   <select name ="house">
@@ -51,6 +55,21 @@
                   <option value="Winthrop">Winthrop House</option>
                   </select>
             </td>
+          </tr>
+          <tr>
+            <td>Username:</td>
+            <td><input name="username" type="text"></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input name="password" type="password"></td>
+          </tr>
+          <tr>
+            <td>Password2:</td>
+            <td><input name="password2" type="password"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Register"></td>
           </tr>
         </table>
       </form>
