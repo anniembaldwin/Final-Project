@@ -8,6 +8,9 @@
  *
  *                      Receives return from CS50 Login
  ***************************************************************************/ 
+    // require common.php
+    require_once("includes/common.php");
+    
     // configuration
     require_once(dirname(__FILE__) . "/includes/config.php");
  
