@@ -29,6 +29,7 @@
     $result = mysql_query("SELECT * FROM users WHERE email = '$email'");
     if (mysql_num_rows($result) == 1)
     {
+        $id = $_SESSION["id"];
         redirect("index.php");
     }   
     else
