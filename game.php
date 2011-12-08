@@ -63,8 +63,8 @@
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             success: function(data){
-                console.log(data.correct);
-                console.log(data.points);
+                console.log(data);
+                
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
