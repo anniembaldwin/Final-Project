@@ -55,7 +55,7 @@
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
             $("#trash").click(function() {
-            
+            console.log("does this work");
             // remember what bin was clicked (trash)  
             var bin = $("#trash").attr('alt');
             
