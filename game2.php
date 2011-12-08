@@ -45,7 +45,7 @@ if ($bin == $status)
      // echo that array
      //echo json_encode($arr);
      
-     echo(mysql_error());
+     echo($points);
 
 }
            
@@ -73,7 +73,7 @@ if ($bin != $status)
     // echo that array
     //echo json_encode($arr);
 
-    echo(mysql_error());
+    echo($points);
 }      
 
 ?>
