@@ -25,6 +25,19 @@ body
     margin: 0;
 }
 
+/* defaults for paragraph */
+p
+{
+    text-align: center;
+}
+
+/* center all of the tables*/
+table.center
+{
+    margin-left: auto;
+    margin-right:auto;
+}
+
 /* center text in bottom div */
 div#bottom
 {

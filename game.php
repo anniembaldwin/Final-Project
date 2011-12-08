@@ -128,7 +128,7 @@
      </div>
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
-            <table align = "center">
+            <table class="center">
                 <tr align = "center">
                     <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
                 <tr>    
