@@ -64,7 +64,7 @@
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-                console.log(data);
+                console.log("halloooo");
                 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
