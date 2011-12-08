@@ -54,20 +54,6 @@
        
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
-            $("img.trash").click(function() {
-            
-            // remember what bin was clicked (trash)  
-            var bin = $("img.trash").attr('alt');
-            
-            // send the status and receptacle data to game2.php for validation and points update    
-            $.get("game2.php",{status:status, bin:bin},function(data){
-                $("#Correctness").html(data);
-                //$("#points").html(data.points);
-                      
-            // load a new image to the page for them to evaluate     
-            random_image();
-            });
-
             $("#trash").click(function() {
             
             // remember what bin was clicked (trash)  
@@ -75,18 +61,18 @@
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.get("game2.php",{status:status, bin:bin},function(data){
-                console.log(data);
-                $("#Correctness").html(data.correct);
-                $("#points").html(data.points);
+                //console.log(data);
+                $("#Correctness").html(data);
+                //$("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            },"json");
+            });
                      
       });
       
       // if the recycle image is clicked, validate
-      $("img.recycle").click(function() {
+      $("#recycle").click(function() {
             
             // we want to store the values of the clicked receptacle and the status of the bin  
             var bin = $("img.recycle").attr('alt'); 
@@ -103,7 +89,7 @@
       });
      
      // if the ewaste image is clicked, validate
-     $("img.ewaste").click(function() {
+     $("#ewaste").click(function() {
             
             // we want to store the values of the clicked receptacle and the status of the bin  
             var bin = $("img.ewaste").attr('alt'); 
@@ -146,9 +132,9 @@
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img class="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
