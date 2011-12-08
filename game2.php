@@ -15,7 +15,8 @@
 
 // remember session id
    $id = $_SESSION["id"];
-   
+
+}
 // store the bin and status values
     $bin = $_GET["bin"];
     $status = $_GET["status"]; 
@@ -35,6 +36,11 @@ if ($bin == $status)
                      
      // access the data row
      $row = mysql_fetch_array($result); 
+     
+     // submit error checking
+     if (!$result) {
+        die("Error running $sql: " . mysql_error());
+     }
                      
      // access points
      $points = $row["points"];
@@ -60,7 +66,12 @@ if ($bin != $status)
                      
     // execute query on remembering the users' points
     $result = mysql_query($sql);  
-                     
+    
+    // include error checking
+    if (!$result) {
+        die("Error running $sql: " . mysql_error());
+     }
+    
     // access the data row
     $row = mysql_fetch_array($result); 
                      
