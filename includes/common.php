@@ -22,7 +22,7 @@
     // requirements
     require_once("constants.php");
     require_once("helpers.php");
-    require_once("../config.php");
+    require_once("config.php");
 
     // require authentication for most pages
     if (!preg_match("{/(:?login|logout|register)\d*\.php$}", $_SERVER["PHP_SELF"]))
