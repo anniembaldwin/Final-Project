@@ -17,7 +17,7 @@
     $password = $_POST["password"];
     
     // prepare SQL
-    $sql = "SELECT * FROM users WHERE name='$name'";
+    $sql = "SELECT * FROM users WHERE username='$name'";
 
     // execute query
     $result = mysql_query($sql);
