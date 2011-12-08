@@ -48,7 +48,7 @@
     
         <!--Big Board-->
     <?
-       $bigboard = mysql_query("SELECT name, house, points FROM users ORDER BY points DESC");?>
+       $bigboard = mysql_query("SELECT username, house, points FROM users ORDER BY points DESC");?>
          <table>
          <tbody>
          <!--makes table headings-->

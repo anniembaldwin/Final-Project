@@ -63,9 +63,7 @@
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             dataType: "json",
-            success: function(data){
-                console.log("halloooo");
-                
+            success: function(data){ 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
