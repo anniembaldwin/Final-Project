@@ -122,7 +122,7 @@
 </head>
     <body onload = "random_image()">
      <div id = "top">
-     <  a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.png" width="544"></a>
+     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.png" width="544"/></a>
      </div>
      <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
            and gain one point per correctly sorted item!</p>
