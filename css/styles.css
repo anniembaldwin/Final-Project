@@ -38,6 +38,12 @@ table.center
     margin-right:auto;
 }
 
+/* make a border for all the tables and table cells*/
+table, th, td
+{
+border: 1px solid black;
+}
+
 /* center text in bottom div */
 div#bottom
 {

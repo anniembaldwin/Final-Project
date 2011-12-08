@@ -26,7 +26,7 @@
   <body>
     
     <div id="top">
-      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.jpg"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.png"></a>
     </div>
 
     <div id="middle">

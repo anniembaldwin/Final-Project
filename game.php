@@ -42,15 +42,14 @@
            var name = ITEMS[random_integer].name;
            
            // define the img source
-           var picture = "Images/" + name + ".jpg";
+           var picture = "Images/" + name + ".png";
            
            // set the src attribute of the picture
            document.getElementById("RandomItem").setAttribute("src", picture);
            
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
-       }
-       
+       }  
        
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
@@ -84,7 +83,7 @@
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-                console.log("halloooo");
+                
                 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
@@ -124,26 +123,29 @@
 </head>
     <body onload = "random_image()">
      <div id = "top">
-     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.jpg" width="544"></a>
+     <  a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.png" width="544"></a>
      </div>
-            <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
-                 and gain one point per correctly sorted item!</p>
-            <table class="center">
-                <tr align = "center">
-                    <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
-                <tr>    
-                    <td>
-                    <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
-                    </td>
-                </tr>
-                <tr id= "Caption" style="text-align:center"></tr>
-                <tr></tr>
-                <tr style="text-align:center">
-                    <td id ="points"></td>
-                 </tr>    
-             </table>               
-             <div id = "bottom">
-                <table>
+     <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
+           and gain one point per correctly sorted item!</p>
+     <table id= "item" class="center">
+           <tr align = "center">
+                <td id ="Correctness" style ="color:green">Right or Wrong?</td>
+                <td id ="info">Confused? Click <a href="singlestream.html">here</a> for more information!</td>
+           <tr>    
+                <td>
+                    <img id="RandomItem" alt="Item to Sort" src=""/>                      
+                </td>
+           </tr>
+           <tr style="text-align:center">
+                <td id="Caption"></td>
+           </tr>     
+           <tr style="text-align:center">
+                <td>Total Points:</td>
+                <td id ="points"></td>
+           </tr>    
+    </table>               
+    <div id = "bottom">
+          <table>
                     <tr> 
                         <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
                         <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
@@ -154,7 +156,7 @@
                         <td style ="text-align:center">Recycling Bin</td>
                         <td style ="text-align:center">Electronic Recycling</td>
                     </tr>
-                </table>
+           </table>
                       <a href="singlestream.html">Single Stream Recycling</a>
                       |
                       <a href="erecycle.html">Electronic Recycling</a>
@@ -167,7 +169,7 @@
                       |
                       <a href="logout.php" style="font-weight: bold">Log Out</a>
                      
-             </div>   
+          </div>   
      </body>
   </html>   
  
