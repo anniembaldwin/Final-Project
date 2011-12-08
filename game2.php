@@ -16,7 +16,7 @@
 // remember session id
    $id = $_SESSION["id"];
 
-}
+
 // store the bin and status values
     $bin = $_GET["bin"];
     $status = $_GET["status"]; 
