@@ -61,7 +61,7 @@
         <? while ($row=mysql_fetch_array($bigboard)):?>
 
             <tr>
-             <td><?= $row["name"] ?></td> <td><?= $row["house"] ?></td><td><?= $row["points"] ?></td>
+             <td><?= $row["username"] ?></td> <td><?= $row["house"] ?></td><td><?= $row["points"] ?></td>
             </tr>
 
         <? endwhile ?>
