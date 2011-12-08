@@ -101,7 +101,7 @@
             
               
             // remember what bin was clicked (trash)  
-            var bin = $("#recycle").attr('alt');
+            var bin = $("#ewaste").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
