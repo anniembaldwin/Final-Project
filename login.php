@@ -10,7 +10,7 @@
  ***************************************************************************/
 
     // require common code
-    require_once("includes/common.php"); 
+    //require_once("includes/common.php"); 
  
     // configuration
     require_once(dirname(__FILE__) . "/config.php");
