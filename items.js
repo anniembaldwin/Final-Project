@@ -124,11 +124,6 @@ var ITEMS = [
   status: "trash"
  },
  {
-  name: "styrofoamcup",
-  caption: "styrofoam cup",
-  status: "trash"
- },
- {
   name: "temperedglass",
   caption: "tempered glass",
   status: "trash"
