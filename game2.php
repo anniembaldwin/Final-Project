@@ -51,7 +51,7 @@ if ($bin == $status)
      // echo that array
      //echo json_encode($arr);
      
-     echo($points);
+     echo($id);
 
 }
            
@@ -84,7 +84,7 @@ if ($bin != $status)
     // echo that array
     //echo json_encode($arr);
 
-    echo($points);
+    echo($id);
 }      
 
 ?>
