@@ -36,7 +36,7 @@
   </head>
   
   <div id = "top">
-     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.jpg" width="544"></a>
+     <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.png" width="544"></a>
   </div>
     
   <body style="color: green">
