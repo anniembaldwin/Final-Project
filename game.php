@@ -122,7 +122,7 @@
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
                 <tr align = "center">
-                    <td id ="Correctness" style ="color:green">Testing123</td>
+                    <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
                 <tr>    
                     <td>
                     <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
