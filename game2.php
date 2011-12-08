@@ -14,9 +14,8 @@
    require("includes/common.php"); 
 
 // remember session id
-   $email = $_SESSION["email"];
-
-
+   $id = $_SESSION["id"];
+   
 // store the bin and status values
     $bin = $_GET["bin"];
     $status = $_GET["status"]; 
@@ -25,22 +24,17 @@
 if ($bin == $status)
 {
      // update the user's points
-     $sql = "UPDATE users SET points = points + 1 WHERE email = $email";
+     $sql = "UPDATE users SET points = points + 1 WHERE id = '$id'";
      mysql_query($sql);
      
      // prepare sql
-     $sql = "SELECT points FROM users WHERE email = $email";
+     $sql = "SELECT points FROM users WHERE id = $id";
                      
      // execute query on remembering the users' points
      $result = mysql_query($sql);  
                      
      // access the data row
      $row = mysql_fetch_array($result); 
-     
-     // submit error checking
-     if (!$result) {
-        die("Error running $sql: " . mysql_error());
-     }
                      
      // access points
      $points = $row["points"];
@@ -49,29 +43,22 @@ if ($bin == $status)
      $arr = array('correct' => 'you are correct', 'points' => $points);
      
      // echo that array
-     //echo json_encode($arr);
-     
-     echo($id);
+     echo json_encode($arr);
 
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
 if ($bin != $status)
 {
-    $sql = "UPDATE users SET points = points - 1 WHERE email = $email";
+    $sql = "UPDATE users SET points = points - 1 WHERE id = '$id'";
     mysql_query($sql);       
  
     // prepare sql
-    $sql = "SELECT points FROM users WHERE email = $email";
+    $sql = "SELECT points FROM users WHERE id = $id";
                      
     // execute query on remembering the users' points
     $result = mysql_query($sql);  
-    
-    // include error checking
-    if (!$result) {
-        die("Error running $sql: " . mysql_error());
-     }
-    
+                     
     // access the data row
     $row = mysql_fetch_array($result); 
                      
@@ -82,9 +69,9 @@ if ($bin != $status)
     $arr = array('correct' => 'you are incorrect', 'points' => $points);
      
     // echo that array
-    //echo json_encode($arr);
+    echo json_encode($arr);
 
-    echo($id);
 }      
+
 
 ?>
