@@ -42,7 +42,7 @@ if ($bin == $status)
 
      //print("That's correct");
      // return correctness and points
-    print("{correct: 'You are correct!', points: $points}");
+    print("{correct: 'You are correct', points: $points}");
 
      // return correctness and points
     //print("{correct: 'You're correct!', points: $points}");
@@ -70,7 +70,7 @@ if ($bin != $status)
      // return correctness and points
     //print("that's incorrect");
      // return correctness and points
-    print("{correct: 'That is incorrect!', points: $points}");
+    print("{correct: 'That is incorrect', points: $points}");
 
 }      
 
