@@ -38,7 +38,7 @@
     $id = $_SESSION["id"];
     
     // if that user has already registered, redirect them to index.php
-    $result = mysql_query("SELECT * FROM users WHERE id = $id");
+    $result = mysql_query("SELECT * FROM users WHERE email = $email");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
     else
