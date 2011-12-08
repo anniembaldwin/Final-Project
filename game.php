@@ -147,9 +147,9 @@
     <div id = "bottom">
           <table>
                     <tr> 
-                        <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img id="trash" alt="trash" src="Images/trashcan.png"></td>
+                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.png"></td>
+                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.png"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>
