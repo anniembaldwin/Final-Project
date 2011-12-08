@@ -60,14 +60,18 @@
             var bin = $("#trash").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
-            $.get("game2.php",{status:status, bin:bin},function(data){
-                console.log(data);
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            success: function(data){
+               
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            }, "json");
+            },
+             
+          });
                      
       });
       
