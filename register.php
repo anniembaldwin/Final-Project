@@ -24,9 +24,9 @@
   </head>
 
   <body>
-    <img id="logo" src="Images/logo.jpg"/>
+    
     <div id="top">
-      <a href="index.php"><img alt="C$50 Finance" src="images/logo.gif"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.jpg"></a>
     </div>
 
     <div id="middle">
@@ -52,18 +52,6 @@
                   <option value="Winthrop">Winthrop House</option>
                   </select>
             </td>
-          </tr>
-          <tr>
-            <td>Username:</td>
-            <td><input name="username" type="text"></td>
-          </tr>
-          <tr>
-            <td>Password:</td>
-            <td><input name="password" type="password"></td>
-          </tr>
-          <tr>
-            <td>Password2:</td>
-            <td><input name="password2" type="password"></td>
           </tr>
           <tr>
             <td colspan="2"><input type="submit" value="Register"></td>
