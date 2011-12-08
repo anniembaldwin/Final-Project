@@ -19,6 +19,17 @@
 <html>
   <head>
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+        <!--
+
+            td, th
+            {
+                border: 3px #000000 solid;
+                border-style: outset;
+            }
+
+        -->
+        </style>
     <title>RecycleHarvard: Welcome!</title>
   </head>
   
@@ -37,12 +48,12 @@
     
         <!--Big Board-->
     <?
-       $bigboard = mysql_query("SELECT username, house, points FROM users ORDER BY points DESC");?>
+       $bigboard = mysql_query("SELECT name, house, points FROM users ORDER BY points DESC");?>
          <table>
          <tbody>
          <!--makes table headings-->
             <tr>
-                    <th> Username </th>
+                    <th> Name </th>
                     <th> House </th>
                     <th> Points</th>
             </tr>
@@ -50,7 +61,7 @@
         <? while ($row=mysql_fetch_array($bigboard)):?>
 
             <tr>
-             <td><?= $row["username"] ?></td> <td><?= $row["house"] ?></td><td>$<?= $row["points"] ?></td>
+             <td><?= $row["name"] ?></td> <td><?= $row["house"] ?></td><td><?= $row["points"] ?></td>
             </tr>
 
         <? endwhile ?>
