@@ -71,10 +71,7 @@
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            },
-             
-          });
-                     
+            }}),          
       });
       
       // if the recycle image is clicked, validate
@@ -95,10 +92,8 @@
                       
             // load a new image to the page for them to evaluate     
             random_image();  
-            },
-             
-          });
-                     
+            }}),
+                 
       });
      
      // if the ewaste image is clicked, validate
@@ -120,12 +115,11 @@
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            });
-                     
-            }); 
+            }});
+
     });  
   
-};       
+});       
 
      </script>
     </head>
