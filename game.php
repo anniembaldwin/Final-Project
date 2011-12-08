@@ -54,7 +54,6 @@
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
             $("#trash").click(function() {
-            console.log("does this work");
             // remember what bin was clicked (trash)  
             var bin = $("#trash").attr('alt');
             
@@ -66,7 +65,7 @@
                 // upon success, tell the user whether they got the right answer and the total number of points they have
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                      
+            console.log("does this success work");          
             // load a new image to the page for them to evaluate     
             random_image();
             }});          
