@@ -27,7 +27,7 @@
     // require authentication for most pages
     if (!preg_match("{/(:?login|logout|register)\d*\.php$}", $_SERVER["PHP_SELF"]))
     {
-        if (!isset($_SESSION["user"]))
+        if (!isset($_SESSION["id"]))
             redirect("login.php");
     }
 
