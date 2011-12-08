@@ -55,8 +55,8 @@
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
             $("#trash").click(function() {
-            console.log("does this work");
-            // remember what bin was clicked (trash)  
+            
+            // remember that the trash wash clicked  
             var bin = $("#trash").attr('alt');
             
             // make the ajax call to server    
@@ -84,7 +84,7 @@
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-                console.log("halloooo");
+             
                 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
@@ -126,14 +126,14 @@
      <div id = "top">
      <a href="index.php"><img alt="RecycleHarvard" height="300" src="Images/logo.png" width="544"></a>
      </div>
-            <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
+     <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table class="center">
                 <tr align = "center">
                     <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
                 <tr>    
                     <td>
-                    <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
+                    <img id="RandomItem" alt="Item to Sort" src=""/>                      
                     </td>
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>

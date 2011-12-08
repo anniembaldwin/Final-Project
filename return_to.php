@@ -24,16 +24,23 @@
     $host  = $_SERVER["HTTP_HOST"];
     $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
     
-    // cache the user's session
-    $_SESSION["id"] = $id;
-    
-    // if user hasn't already registered, send to register.php
+    // find the user's id
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
-    $result = mysql_query("SELECT * FROM users WHERE email = $email");
+    $result = mysql_query("SELECT id FROM users WHERE email = $email");
+                      
+    // access the data row
+    $row = mysql_fetch_array($result); 
+                     
+    // define session id to be the id in the database
+    $_SESSION["id"] = $row["id"];
     
+    // define id
+    $id = $_SESSION["id"];
+    
+    // if that user has already registered, redirect them to index.php
+    $result = mysql_query("SELECT * FROM users WHERE id = $id");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
-     
     else
         redirect("register.php");
 

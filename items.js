@@ -179,11 +179,6 @@ var ITEMS = [
   status: "recycle"
  },
  {
-  name: "cardboardtakeoutbox",
-  caption: "cardboard takeout box",
-  status: "recycle"
- },
- {
   name: "detergentbottle",
   caption: "detergent bottle",
   status: "recycle"
