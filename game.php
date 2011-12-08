@@ -71,7 +71,7 @@
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            }}),          
+            }});          
       });
       
       // if the recycle image is clicked, validate
