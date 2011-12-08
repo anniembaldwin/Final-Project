@@ -17,7 +17,7 @@
     // enable sessions, restricting cookie to /~abaldwin/finalproject/
     if (preg_match("{^(/~[^/]+/abaldwin/)}", $_SERVER["REQUEST_URI"], $matches))
         session_set_cookie_params(0, $matches[1]);
-    //session_start();
+    session_start();
 
     // requirements
     require_once("constants.php");
