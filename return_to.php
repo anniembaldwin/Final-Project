@@ -27,11 +27,8 @@
     // if user hasn't already registered, send to register.php
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
     $result = mysql_query("SELECT * FROM users WHERE email = '$email'");
-    dump($result);
     if (mysql_num_rows($result) == 1)
     {
-        // cache the user's session
-        $_SESSION["id"] = $id;
         redirect("index.php");
     }   
     else
