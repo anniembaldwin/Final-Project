@@ -13,11 +13,11 @@
     require_once("includes/common.php"); 
 
     // escape username to avoid SQL injection attacks
-    $username = mysql_real_escape_string($_POST["username"]);
+    $name = mysql_real_escape_string($_POST["username"]);
     $password = $_POST["password"];
     
     // prepare SQL
-    $sql = "SELECT * FROM users WHERE username='$username'";
+    $sql = "SELECT * FROM users WHERE name='$name'";
 
     // execute query
     $result = mysql_query($sql);

@@ -25,15 +25,15 @@
     <img id="logo" src="Images/logo.jpg"/>
     <div id="top">
        Log in!
-      <a href="index.php"><img alt="Recycle-Harvard" src="Images/beerbottle.gif"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.jpg"></a>
     </div>
 
     <div id="middle">
       <form action="login2.php" method="post">
         <table>
           <tr>
-            <td>Username:</td>
-            <td><input name="username" type="text"></td>
+            <td>Name:</td>
+            <td><input name="name" type="text"></td>
           </tr>
           <tr>
             <td>Password:</td>
