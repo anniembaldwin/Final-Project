@@ -32,10 +32,7 @@
     <div id="middle">
       <form action="register2.php" method="post">
         <table>
-          <tr>
-            <td>Name:</td>
-            <td><input name="name" type="text"></td>
-          </tr>
+          
           <tr>
             <td>House</td>
             <td>
