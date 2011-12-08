@@ -15,9 +15,13 @@
     // configuration
     //require_once(dirname(__FILE__) . "/config.php");
  
+    // log out current user, forgetting their session id
+    logout();
+ 
     // if user is already logged in, log out
     if (isset($_SESSION["user"]))
         unset($_SESSION["user"]);
+ 
  
     // redirect user to index.php
     $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
