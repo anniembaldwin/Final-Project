@@ -1,0 +1,20 @@
+Documentation
+Natalie Jacewicz and Annie Baldwin
+
+	Our project is an interactive quiz called “Recycle Harvard.” To login, a user must have a Harvard PIN. The user must enter a Harvard ID and PIN in order to access the rest of the site. If the student has not logged in before, she will be asked to choose her house, and then she will be redirected to a homepage with a Big Board and links to information about Harvard recycling. If she has already logged in before, she will be automatically directed to this homepage.
+
+	The Big Board displays the names of players by points in descending order (users with the most points are listed at the top). Also displayed are the users’ houses and number of points.
+
+	If she chooses to read one of the informational pages, she may click a link and be redirected to a page of informational text. Otherwise, she may click “Play the game!” and be redirected to the quiz.
+
+	If it is the user’s first time to play the game, she will begin with zero points. Otherwise, she will begin with the points earned from previous games. The game will present the user with a “random” picture of an item someone might come across on campus. The user must choose whether the item goes in the trash, recycling, or E-waste bucket by clicking the corresponding bin. If the user chooses correctly, she will earn a point. If the user chooses incorrectly, she will lose a point.
+
+	The user can choose to stop playing the game whenever she likes. We want users to play the game for as long as possible, earning more and more points for their houses. (Think of the way users can play Free Rice indefinitely). At any time, the user can choose to click the informational pages in links below the game. The user will also earn a place on the Big Board.
+
+	When the user decides to log out, she must select the “Logout” link at the bottom of the page. This event will log the user out, and the user will be redirected to a page thanking the user for playing and inviting her to play again soon. If she chooses to do so, she may log back in choosing the “Login” link at the bottom of the page.
+
+	We hope that people will return and play the game repeatedly, learning more each time they play. At some time in the spring (when we get an exact date, we’ll post it on the website) we will reward the houses whose players have earned the most points on the Big Board with points toward the Green Cup. 
+	
+	The Green Cup is an initiative of the Resource Efficiency Program. Similar to the intramural Strauss Cup, the Green Cup challenges students to earn points for their house through efforts to be sustainable. We hope that with the aid of the Recycle Harvard quiz students will learn how to live more sustainably and have fun in the process! 
+
+

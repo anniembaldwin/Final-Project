@@ -20,6 +20,14 @@
     $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
     $host  = $_SERVER["HTTP_HOST"];
     $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
-    header("Location: {$protocol}://{$host}{$path}/index.php");
- 
+    
+    // if user hasn't already registered, send to register.php
+    $email = mysql_real_escape_string($_SESSION["user"]["email"]);
+    $result = mysql_query("SELECT * FROM users WHERE email = '$email'");
+    if (mysql_num_rows($result) == 1)
+        redirect("index.php");
+    else
+        redirect("register.php");
+
 ?>
+

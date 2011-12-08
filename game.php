@@ -27,13 +27,17 @@
        <script src = "items.js"></script>
        <script src = "jquery.js"></script>
        <script type = "text/javascript">
-
-       // return a random number between 0 and the length of the ITEMS array 
-       random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
         
-        // load a random image to be sorted to the page
+       
+       // load a random image to be sorted to the page
        function random_image ()
        { 
+           // return a new random number between 0 and the length of the ITEMS array 
+           random_integer = Math.floor(Math.random()*(ITEMS.length +1));       
+        
+           // store the loaded item's status (recyclable, disposable, or electronic recyclable)
+           status = ITEMS[random_integer].status;
+           
            // find the corresponding name in the array
            var name = ITEMS[random_integer].name;
            
@@ -46,31 +50,60 @@
            // set the caption attribute of the picture
            document.getElementById("Caption").innerHTML = ITEMS[random_integer].caption;
        }
-
        
-       // store the loaded item's status (recyclable, disposable, or electronic recyclable)
-       status = ITEMS[random_integer].status;
        
-       // after the pages is loaded and one of the receptacles is clicked, run the validation
+       // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){  
-            $("img.receptacle").click(function() {
-            console.log("does this click work");
+            $("#trash").click(function() {
+            
+            // remember what bin was clicked (trash)  
+            var bin = $("#trash").attr('alt');
+            
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.get("game2.php",{status:status, bin:bin},function(data){
+                console.log(data);
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
+                      
+            // load a new image to the page for them to evaluate     
+            random_image();
+            },"json");
+                     
+      });
+      
+      // if the recycle image is clicked, validate
+      $("img.recycle").click(function() {
+            
             // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.receptacle").attr('alt'); 
+            var bin = $("img.recycle").attr('alt'); 
             console.log($("this")); 
-            console.log(bin);
+            
             // send the status and receptacle data to game2.php    
             $.get("game2.php",{status:status, bin:bin},function(result){
                 $("#Correctness").html(result);
-            console.log("did this work?")
-            
+                       
             // load a new image to the page for them to evaluate     
             random_image();
             });
-         
-            
+                     
       });
      
+     // if the ewaste image is clicked, validate
+     $("img.ewaste").click(function() {
+            
+            // we want to store the values of the clicked receptacle and the status of the bin  
+            var bin = $("img.ewaste").attr('alt'); 
+            console.log($("this")); 
+            
+            // send the status and receptacle data to game2.php    
+            $.get("game2.php",{status:status, bin:bin},function(result){
+                $("#Correctness").html(result);
+                     
+            // load a new image to the page for them to evaluate     
+            random_image();
+            });
+                     
+      }); 
  });  
   
        
@@ -83,22 +116,6 @@
             <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
-                <?
-                     // remember the user's id from session id
-                     $id = $_SESSION["id"];
-                     
-                     // prepare sql
-                     $sql = "SELECT points FROM users WHERE id = $id";
-                     
-                     // execute query on remembering the users' points
-                     $result = mysql_query($sql);  
-                     
-                     // access the data row
-                     $row = mysql_fetch_array($result); 
-                     
-                     // access points
-                     $points = $row["points"];
-                ?>
                 <tr align = "center">
                     <td id ="Correctness" style ="color:green">Testing123</td>
                 <tr>    
@@ -109,15 +126,15 @@
                 <tr id= "Caption" style="text-align:center"></tr>
                 <tr></tr>
                 <tr id ="Points" style="text-align:center">
-                    <td>You have <?= $points ?> points</td>
+                    <td></td>
                  </tr>    
              </table>               
              <div id = "bottom">
                 <table>
                     <tr> 
-                        <td><img class="trash" alt="trash" src="Images/trashcan.jpg"></td>
-                        <td><img class="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
-                        <td><img class="receptacle" alt="e-waste" src="Images/ewaste.jpg"></td>
+                        <td><img id="trash" alt="trash" src="Images/trashcan.jpg"></td>
+                        <td><img id="recycle" alt="recycle" src="Images/recyclingbin.jpg"></td>
+                        <td><img id="ewaste" alt="e-waste" src="Images/ewaste.jpg"></td>
                     </tr>
                     <tr>
                         <td style ="text-align:center">Trash Can</td>

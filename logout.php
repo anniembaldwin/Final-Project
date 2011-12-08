@@ -11,10 +11,6 @@
 
     // require common code
     require_once("includes/common.php"); 
-
-    // log out current user, if any
-    //logout();
-    
  
     // configuration
     require_once(dirname(__FILE__) . "/config.php");
@@ -27,36 +23,8 @@
     $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
     $host  = $_SERVER["HTTP_HOST"];
     $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
-    header("Location: {$protocol}://{$host}{$path}/index.php");
+    header("Location: {$protocol}://{$host}{$path}/logout2.php");
  
 ?>
 
 
-<!DOCTYPE html>
-
-<html>
-
-  <head>
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-
-     <title>RecycleHarvard: Log Out</title>
-
-  </head>
-
-  <body>
-    <img id="logo" src="Images/logo.jpg"/div>
-    <div id="top">
-      <a href="index.php"><img alt="C$50 Finance" src="images/logo.gif"></a>
-    </div>
-
-    <div id="middle">
-      Thanks for playing RecycleHarvard, come again soon!
-    </div>
-
-    <div id="bottom">
-      <a href="login.php">log in</a> again
-    </div>
-
-  </body>
-
-</html>
