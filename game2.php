@@ -39,11 +39,12 @@ if ($bin == $status)
      // access points
      $points = $row["points"];
      
+     // define array
+     $arr = array('correct' => 'you are correct', 'points' => $points);
+     
+     // echo that array
+     echo json_encode($arr);
 
-     //print("That's correct");
-     // return correctness and points
-    print("{correct: 'You are correct', points: $points}");
-    
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total

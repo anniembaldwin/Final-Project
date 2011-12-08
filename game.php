@@ -62,7 +62,7 @@
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
-            dataType: json,
+            dataType: "json",
             success: function(data){
                 console.log("halloooo");
                 
